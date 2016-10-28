@@ -1,0 +1,46 @@
+---
+layout: page
+title: Projects
+order: 1
+---
+
+<!--[if gt IE 8]><!---->
+<style>
+  {% capture include_to_scssify %}
+  {% include styles/projects.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+</style>
+<!--<![endif]-->
+
+{% assign ordered_projects = site.projects | sort:"date" %}
+{% for project in ordered_projects reversed %}
+  {% assign currentdate = project.date | date: "%Y" %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</div><br/>{% endunless %}
+    <h2 id="y{{project.date | date: "%Y"}}">{{ currentdate }}</h2>
+    <div class="projects">
+    {% assign date = currentdate %}
+  {% endif %}
+    <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover">
+      <div class="card">
+        <h3 class="name">
+          <span class="a">{{ project.title }}</span>
+        </h3>
+        <div class="img sixteen-nine">
+          {% if project.screenshot %}
+            <img
+              alt="Thumbnail"
+              srcset="{% for hash in project.screenshot %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
+              src="{{ src }}"
+              sizes="(max-width: 28em) 100vw, 19rem"
+            />
+          {% endif %}
+        </div>
+        {% if project.caption %}
+          <div class="caption">{{ project.caption | markdownify }}</div>
+        {% endif %}
+      </div>
+    </a>
+  {% if forloop.last %}</div><br/>{% endif %}
+{% endfor %}

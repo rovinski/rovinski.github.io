@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% assign project = page %}
+
+<article class="page" role="article">
+  <h1 class="page-title">{{ project.title }}</h1>
+
+  <div class="post-date">
+    <a href="/projects/">Project</a>,
+    <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>.
+    <span style="float:right">
+      {% if project.link %}<a href="{{ project.link }}">Live</a>{% endif %}
+      {% if project.link and project.github %}|{% endif %}
+      {% if project.github %}<a href="{{ project.github }}">Source</a>{% endif %}
+    </span>
+  </div>
+
+  {% if project.screenshot %}
+    <img
+      class="lead"
+      alt="Screenshot"
+      srcset="{% for hash in project.screenshot reversed %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
+      src="{{ src }}"
+      sizes="(max-width: 28em) 100vw, 48rem"
+    />
+  {% endif %}
+
+  {% if project.description %}
+    {% capture desc %}{{ project.description }}{:.message}{% endcapture %}
+    {{ desc | markdownify }}
+  {% endif %}
+
+  <hr/>
+
+  {{ content }}
+
+</article>
