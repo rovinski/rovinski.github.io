@@ -22,7 +22,7 @@ order: 1
     <div class="projects">
     {% assign date = currentdate %}
   {% endif %}
-    <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover">
+    <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover" data-flip="project">
       <div class="card">
         <h3 class="name">
           <span class="a">{{ project.title }}</span>
@@ -31,8 +31,8 @@ order: 1
           {% if project.screenshot %}
             <img
               alt="Thumbnail"
-              srcset="{% for hash in project.screenshot %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
               src="{{ src }}"
+              srcset="{% for hash in project.screenshot %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
               sizes="(max-width: 28em) 100vw, 19rem"
             />
           {% endif %}

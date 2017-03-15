@@ -7,9 +7,10 @@ layout: default
 <article class="page" role="article">
   <h1 class="page-title">{{ project.title }}</h1>
 
-  <div class="post-date">
-    <a href="/projects/">Project</a>,
-    <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>.
+  <div class="post-date heading">
+    <a href="{{ site.baseurl }}/projects/" data-flip="title">Projects</a>
+    |
+    <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>
     <span style="float:right">
       {% if project.link %}<a href="{{ project.link }}">Live</a>{% endif %}
       {% if project.link and project.github %}|{% endif %}
@@ -18,13 +19,14 @@ layout: default
   </div>
 
   {% if project.screenshot %}
+  <div class="img lead sixteen-nine">
     <img
-      class="lead"
       alt="Screenshot"
-      srcset="{% for hash in project.screenshot reversed %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
       src="{{ src }}"
+      srcset="{% for hash in project.screenshot reversed %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
       sizes="(max-width: 28em) 100vw, 48rem"
     />
+  </div>
   {% endif %}
 
   {% if project.description %}
