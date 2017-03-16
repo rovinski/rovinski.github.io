@@ -4,6 +4,7 @@ no-param-reassign,
 import/no-extraneous-dependencies,
 import/no-unresolved,
 import/extensions,
+class-methods-use-this,
 */
 
 import { Observable } from 'rxjs/Observable';
@@ -14,8 +15,6 @@ import 'rxjs/add/operator/zip';
 
 import { animate } from '../common';
 import Flip from './flip';
-
-const DURATION = 200; // TODO: pass via constructor or smthing?
 
 export default class ProjectFlip extends Flip {
   start(currentTarget) {
@@ -68,7 +67,7 @@ export default class ProjectFlip extends Flip {
     //     `translate3d(${titleInvertX}px, ${titleInvertY}px, 0) scale(${titleInvertScale})` },
     //   { transform: 'translate3d(0, 0, 0) scale(1)' },
     // ], {
-    //   duration: DURATION,
+    //   duration: this.duration,
     //   easing: 'cubic-bezier(0,0,0.32,1)',
     //   fill: 'forwards',
     // }).subscribe();
@@ -77,7 +76,7 @@ export default class ProjectFlip extends Flip {
       { transform: `translate3d(${invertX}px, ${invertY}px, 0) scale(${invertScale})` },
       { transform: 'translate3d(0, 0, 0) scale(1)' },
     ], {
-      duration: DURATION,
+      duration: this.duration,
       easing: 'cubic-bezier(0,0,0.32,1)',
       // fill: 'forwards',
     });
@@ -93,17 +92,17 @@ export default class ProjectFlip extends Flip {
 
     // TODO: switch latest
     return Observable.fromEvent(img.querySelector('img'), 'load')
-      .zip(Observable.timer(DURATION + 100))
+      .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
       .do(() => {
         img.style.opacity = 1;
         this.shadowMain.style.display = 'none';
       });
   }
 
-  // after() {
-  //   // shadowMain.style.display = 'none';
-  //   // main.querySelector(TITLE_SELECTOR).style.opacity = 1;
-  // }
+  after() {
+    // shadowMain.style.display = 'none';
+    // main.querySelector(TITLE_SELECTOR).style.opacity = 1;
+  }
 }
 
 Flip.types.project = ProjectFlip;
