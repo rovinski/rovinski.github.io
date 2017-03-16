@@ -92,9 +92,9 @@ export default class ProjectFlip extends Flip {
     img.style.opacity = 0;
 
     // TODO: switch latest
-    Observable.fromEvent(img.querySelector('img'), 'load')
+    return Observable.fromEvent(img.querySelector('img'), 'load')
       .zip(Observable.timer(DURATION + 100))
-      .subscribe(() => {
+      .do(() => {
         img.style.opacity = 1;
         this.shadowMain.style.display = 'none';
       });
