@@ -99,7 +99,7 @@
     margin-bottom: 1rem;
 
     width: 100%;
-    @media (min-width: 28rem) {
+    @media (min-width: $break-point-font-1) {
       width: calc(50% - 1rem);
     }
 

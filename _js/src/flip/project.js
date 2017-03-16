@@ -15,7 +15,7 @@ import 'rxjs/add/operator/zip';
 import { animate } from '../common';
 import Flip from './flip';
 
-const DURATION = 150; // TODO: pass via constructor or smthing?
+const DURATION = 200; // TODO: pass via constructor or smthing?
 
 export default class ProjectFlip extends Flip {
   start(currentTarget) {
