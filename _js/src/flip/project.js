@@ -11,6 +11,10 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/timer';
 
+import { animationFrame } from 'rxjs/scheduler/animationFrame';
+
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/observeOn';
 import 'rxjs/add/operator/zip';
 
 import { animate } from '../common';
@@ -42,7 +46,7 @@ export default class ProjectFlip extends Flip {
       <div class="post-date heading" style="opacity:0">|</div>
     `;
 
-    img.insertAdjacentHTML('beforebegin', '<div class="img sixteen-nine"></div>');
+    img.insertAdjacentHTML('beforebegin', '<div class="sixteen-nine"></div>');
     this.shadowMain.querySelector('.page').appendChild(img);
     this.shadowMain.style.position = 'fixed';
     this.shadowMain.style.display = 'block';
@@ -90,9 +94,9 @@ export default class ProjectFlip extends Flip {
     const img = main.querySelector('.img');
     img.style.opacity = 0;
 
-    // TODO: switch latest
     return Observable.fromEvent(img.querySelector('img'), 'load')
       .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
+      .observeOn(animationFrame)
       .do(() => {
         img.style.opacity = 1;
         this.shadowMain.style.display = 'none';
