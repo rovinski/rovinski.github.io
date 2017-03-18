@@ -101,8 +101,8 @@ export default class ProjectFlip extends Flip {
       Observable.fromEvent(realImg, 'load') :
       Observable.of(true)
     )
-      .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
       .observeOn(animationFrame)
+      .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
       .do(() => {
         img.style.opacity = 1;
         this.shadowMain.style.display = 'none';
@@ -110,8 +110,6 @@ export default class ProjectFlip extends Flip {
   }
 
   after() {
-    // shadowMain.style.display = 'none';
-    // main.querySelector(TITLE_SELECTOR).style.opacity = 1;
   }
 }
 
