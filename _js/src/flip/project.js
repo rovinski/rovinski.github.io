@@ -84,11 +84,11 @@ export default class ProjectFlip extends Flip {
       duration: this.duration,
       easing: 'cubic-bezier(0,0,0.32,1)',
       // fill: 'forwards',
-    }).do(() => { this.shadowMain.style.position = 'absolute'; });
+    })
+      .do(() => { this.shadowMain.style.position = 'absolute'; });
   }
 
   ready(main) {
-    this.shadowMain.style.position = 'absolute';
     // main.querySelector(TITLE_SELECTOR).style.opacity = 0;
 
     // TODO: use id?
