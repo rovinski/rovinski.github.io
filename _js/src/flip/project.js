@@ -84,7 +84,7 @@ export default class ProjectFlip extends Flip {
       duration: this.duration,
       easing: 'cubic-bezier(0,0,0.32,1)',
       // fill: 'forwards',
-    });
+    }).do(() => { this.shadowMain.style.position = 'absolute'; });
   }
 
   ready(main) {
