@@ -9,6 +9,7 @@ class-methods-use-this,
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/timer';
 
 import { animationFrame } from 'rxjs/scheduler/animationFrame';
@@ -94,7 +95,12 @@ export default class ProjectFlip extends Flip {
     const img = main.querySelector('.img');
     img.style.opacity = 0;
 
-    return Observable.fromEvent(img.querySelector('img'), 'load')
+    const realImg = img.querySelector('img');
+
+    return (realImg != null ?
+      Observable.fromEvent(realImg, 'load') :
+      Observable.of(true)
+    )
       .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
       .observeOn(animationFrame)
       .do(() => {

@@ -18,16 +18,16 @@ layout: default
     </span>
   </div>
 
-  {% if project.screenshot %}
   <div class="img lead sixteen-nine">
+    {% if project.screenshot %}
     <img
       alt="Screenshot"
       src="{{ src }}"
       srcset="{% for hash in project.screenshot reversed %}{{ hash[1]}} {{ hash[0]}},{% assign src = hash[1]%}{% endfor %}"
       sizes="(max-width: 28em) 100vw, 48rem"
     />
+    {% endif %}
   </div>
-  {% endif %}
 
   {% if project.description %}
     {% capture desc %}{{ project.description }}{:.message}{% endcapture %}
