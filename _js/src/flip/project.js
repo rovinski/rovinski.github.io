@@ -50,7 +50,7 @@ export default class ProjectFlip extends Flip {
     img.insertAdjacentHTML('beforebegin', '<div class="sixteen-nine"></div>');
     this.shadowMain.querySelector('.page').appendChild(img);
     this.shadowMain.style.position = 'fixed';
-    this.shadowMain.style.display = 'block';
+    this.shadowMain.style.opacity = 1;
 
     // Get the last position.
     const last = img.getBoundingClientRect();
@@ -105,7 +105,7 @@ export default class ProjectFlip extends Flip {
       .zip(Observable.timer(this.duration + 100)) // HACK: add some extra time to preven hiccups
       .do(() => {
         img.style.opacity = 1;
-        this.shadowMain.style.display = 'none';
+        this.shadowMain.style.opacity = 0;
       });
   }
 
