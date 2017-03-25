@@ -75,7 +75,8 @@ export default class ProjectFlip extends Flip {
           img.style.opacity = 1;
           img.style.willChange = '';
         }
-
+      })
+      .finally(() => {
         this.shadowMain.style.opacity = 0;
         this.shadowMain.style.willChange = '';
       });
