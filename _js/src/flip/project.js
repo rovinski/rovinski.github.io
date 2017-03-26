@@ -12,8 +12,8 @@ import { of } from 'rxjs/observable/of';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { timer } from 'rxjs/observable/timer';
 
-import { _do as doRx } from 'rxjs/operator/do';
-import { _finally as finallyRx } from 'rxjs/operator/finally';
+import { _do as effect } from 'rxjs/operator/do';
+import { _finally as cleanup } from 'rxjs/operator/finally';
 import { zipProto as zipWith } from 'rxjs/operator/zip';
 
 import { animate } from '../common';
@@ -30,9 +30,11 @@ export default class ProjectFlip extends Flip {
 
     const placeholder = document.createElement('div');
     placeholder.classList.add('sixteen-nine');
+
     img.parentNode.insertBefore(placeholder, img);
     img.classList.add('lead');
     img.style.transformOrigin = 'left top';
+
     this.shadowMain.querySelector('.page').appendChild(img);
     this.shadowMain.style.position = 'fixed';
     this.shadowMain.style.opacity = 1;
@@ -51,7 +53,7 @@ export default class ProjectFlip extends Flip {
       duration: this.duration,
       easing: 'cubic-bezier(0,0,0.32,1)',
     })
-      ::doRx(() => { this.shadowMain.style.position = 'absolute'; });
+      ::effect(() => { this.shadowMain.style.position = 'absolute'; });
   }
 
   ready(main) {
@@ -71,13 +73,13 @@ export default class ProjectFlip extends Flip {
     )
       // HACK: add some extra time to prevent hiccups
       ::zipWith(Observable::timer(this.duration + 100))
-      ::doRx(() => {
+      ::effect(() => {
         if (img != null) {
           img.style.opacity = 1;
           img.style.willChange = '';
         }
       })
-      ::finallyRx(() => {
+      ::cleanup(() => {
         this.shadowMain.style.opacity = 0;
         this.shadowMain.style.willChange = '';
       });
