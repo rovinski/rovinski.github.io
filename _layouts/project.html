@@ -20,7 +20,7 @@ layout: default
 
   <div class="img lead sixteen-nine">
     {% if project.screenshot %}
-      {% include srcset-img.html img=project.screenshot alt="Screenshot" sizes="(max-width: 28em) 100vw, 48rem" %}
+      {% include srcset-img.html img=project.screenshot alt="Screenshot" sizes="(min-width: 1441px) 48rem, (min-width: 608px) 38rem, 100vw" %}
     {% endif %}
   </div>
 
