@@ -8,12 +8,13 @@ class-methods-use-this,
 */
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/fromEvent';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/timer';
+import { of } from 'rxjs/observable/of';
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { timer } from 'rxjs/observable/timer';
 
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/zip';
+import { _do as doRx } from 'rxjs/operator/do';
+import { _finally as finallyRx } from 'rxjs/operator/finally';
+import { zipProto as zipWith } from 'rxjs/operator/zip';
 
 import { animate } from '../common';
 import Flip from './flip';
@@ -50,7 +51,7 @@ export default class ProjectFlip extends Flip {
       duration: this.duration,
       easing: 'cubic-bezier(0,0,0.32,1)',
     })
-      .do(() => { this.shadowMain.style.position = 'absolute'; });
+      ::doRx(() => { this.shadowMain.style.position = 'absolute'; });
   }
 
   ready(main) {
@@ -65,18 +66,18 @@ export default class ProjectFlip extends Flip {
 
     const realImg = img.querySelector('img');
     return (realImg == null ?
-      Observable.of(true) :
-      Observable.fromEvent(realImg, 'load')
+      Observable::of(true) :
+      Observable::fromEvent(realImg, 'load')
     )
       // HACK: add some extra time to prevent hiccups
-      .zip(Observable.timer(this.duration + 100))
-      .do(() => {
+      ::zipWith(Observable::timer(this.duration + 100))
+      ::doRx(() => {
         if (img != null) {
           img.style.opacity = 1;
           img.style.willChange = '';
         }
       })
-      .finally(() => {
+      ::finallyRx(() => {
         this.shadowMain.style.opacity = 0;
         this.shadowMain.style.willChange = '';
       });
