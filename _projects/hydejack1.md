@@ -9,7 +9,7 @@ screenshot:
     1920w: /hydejack/public/img/projects/hydejack@4x.jpg
     960w:  /hydejack/public/img/projects/hydejack@2x.jpg
     480w:  /hydejack/public/img/projects/hydejack.jpg
-link: http://qwtel.com/hydejack
+link: https://qwtel.com/hydejack
 github: https://github.com/qwtel/hydejack
 caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
 description: >
