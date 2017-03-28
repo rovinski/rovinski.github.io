@@ -1,5 +1,4 @@
-{% assign post = include.project %}
-{% assign src = include.src %}
+{% assign project = include.project %}
 
 <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover" data-flip="project">
   <div class="card">
@@ -15,4 +14,4 @@
       <div class="caption">{{ project.caption | markdownify }}</div>
     {% endif %}
   </div>
-  </a>
+</a>
