@@ -1,17 +1,17 @@
 {% assign project = include.project %}
 
-<a href="{{ site.baseurl }}{{ project.url }}" class="no-hover" data-flip="project">
-  <div class="card">
-    <h3 class="name">
-      <span class="a">{{ project.title }}</span>
-    </h3>
+<div class="card">
+  <h3 class="name">
+    <a href="{{ site.baseurl }}{{ project.url }}" data-flip="title">{{ project.title }}</a>
+  </h3>
+  <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover" data-flip="project">
     <div class="img sixteen-nine">
       {% if project.screenshot %}
-        {% include srcset-img.html img=project.screenshot alt="Thumbnail" sizes="(min-width: 1441px) 22.5rem, (min-width: 608px) 17.5rem, 100vw" %}
+        {% include srcset-img.html img=project.screenshot alt="Thumbnail" sizes="(min-width: 608px) 25.5rem, 100vw" %}
       {% endif %}
     </div>
-    {% if project.caption %}
-      <div class="caption">{{ project.caption | markdownify }}</div>
-    {% endif %}
-  </div>
-</a>
+  </a>
+  {% if project.caption %}
+    <div class="caption">{{ project.caption | markdownify }}</div>
+  {% endif %}
+</div>

@@ -1,0 +1,123 @@
+.faded {
+  color: #9a9a9a;
+}
+
+#_main h1 {
+  line-height: 1;
+}
+
+.hint {
+  cursor: help;
+  float: right;
+}
+
+h3, h4 {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h2, h1 + h3 {
+  font-size: 1.25rem;
+}
+
+h3 a {
+  padding-bottom: 0;
+}
+
+.post-date {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-bottom: 0;
+}
+
+.tags {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 -0.625rem;
+}
+
+.tag {
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin: 0.25rem 0.125rem;
+  padding: 0.125rem 0.5rem;
+  color: #787878;
+  line-height: 1.4;
+  /*font-size: 0.85rem;*/
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+/* With gutters */
+.Grid--gutters {
+  margin: 0 0 0 -2.5rem;
+}
+
+.Grid--gutters > .Grid-cell {
+  padding: 0 0 0 2.5rem;
+}
+
+.col-left {
+
+}
+
+.col-right {
+
+}
+
+// TODO: css class
+// span[title] {
+//   cursor: help;
+// }
+
+.symbol {
+  float: right;
+  color: #ddd;
+  // position: relative;
+  // top: 0.125rem;
+}
+
+dl  {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+dt {
+  clear: both;
+  float: left;
+  width: 3rem;
+  text-align: center;
+
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+dt > span:first-child {
+  color: #9a9a9a;
+}
+
+dd {
+  float: left;
+  margin-left: 0;
+  margin-bottom: .5rem;
+  width: calc(100% - 3rem);
+  padding-left: 0.5rem;
+}
+
+// .sidebar-social > ul {
+//   padding-left: 0;
+// }

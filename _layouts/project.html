@@ -5,32 +5,34 @@ layout: default
 {% assign project = page %}
 
 <article class="page" role="article">
-  <h1 class="page-title">{{ project.title }}</h1>
+  <header>
+    <h1 class="page-title">{{ project.title }}</h1>
 
-  <div class="post-date heading">
-    <a href="{{ site.baseurl }}/projects/" data-flip="title">Projects</a>
-    |
-    <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>
-    <span style="float:right">
-      {% if project.link %}<a href="{{ project.link }}">Live</a>{% endif %}
-      {% if project.link and project.github %}|{% endif %}
-      {% if project.github %}<a href="{{ project.github }}">Source</a>{% endif %}
-    </span>
-  </div>
+    <p class="post-date heading">
+      <a href="{{ site.baseurl }}/projects/" data-flip="title">Projects</a>
+      |
+      <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>
+      <span style="float:right">
+        {% if project.link %}<a href="{{ project.link }}">Live</a>{% endif %}
+        {% if project.link and project.github %}|{% endif %}
+        {% if project.github %}<a href="{{ project.github }}">Source</a>{% endif %}
+      </span>
+    </p>
+  </header>
 
   <div class="img lead sixteen-nine">
     {% if project.screenshot %}
-      {% include srcset-img.html img=project.screenshot alt="Screenshot" sizes="(min-width: 1441px) 48rem, (min-width: 608px) 38rem, 100vw" %}
+      {% include srcset-img.html img=project.screenshot alt="Screenshot" sizes="(min-width: 801px) 54rem, 100vw" %}
     {% endif %}
   </div>
 
-  {% if project.description %}
-    {% capture desc %}{{ project.description }}{:.message}{% endcapture %}
-    {{ desc | markdownify }}
-  {% endif %}
-
-  <hr/>
+  {% include message.html text=project.description %}
 
   {{ content }}
 
 </article>
+
+{% if site.data.author.about %}
+  {% capture heading %}<h2>About</h2>{% endcapture %}
+  {% include about.html heading=heading author=site.data.author %}
+{% endif %}

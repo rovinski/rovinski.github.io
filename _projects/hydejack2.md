@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 'Hydejack 2'
+title: 'Hydejack Legacy'
 date: 1 Oct 2015
 tags: [software]
 screenshot:
@@ -12,11 +12,6 @@ screenshot:
 link: https://qwtel.com/hydejack
 github: https://github.com/qwtel/hydejack
 caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
-description: >
-  A pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
-  [`@qwtel`{:style="background: rgba(255, 255, 255, 0.15)"}](https://twitter.com/qwtel) from
-  [Hyde](http://hyde.getpoole.com).
-  You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 ---
 
 What started out as a simple Jekyll theme is now becoming an increasingly complex frontend application.
