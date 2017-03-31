@@ -284,7 +284,7 @@ layout: default
         <h4>
           {{ lng.language }}
           <span class="faded">
-            <span class="sr-only">Fluency: </span>
+            <span class="sr-only"> | Fluency: </span>
             {% assign fluency = lng.fluency | slugify %}
             {% case fluency %}
               {% when 5 or "native-or-bilingual-proficiency" %}
@@ -333,7 +333,7 @@ layout: default
         <h4>
           {{ skl.name }}
           <span class="faded">
-            <span class="sr-only">Level: </span>
+            <span class="sr-only"> | Level: </span>
             {% assign level = skl.level | slugify %}
             {% case level %}
               {% when 3 or "master" or "expert" or "senior" %}
