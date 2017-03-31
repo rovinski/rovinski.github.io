@@ -12,14 +12,36 @@ layout: page
 <!--<![endif]-->
 
 {% assign ordered_projects = site.projects | sort:"date" | reverse %}
+{% assign is_newline = true %}
+
 {% for project in ordered_projects %}
   {% assign currentdate = project.date | date: "%Y" %}
+
   {% if currentdate != date %}
-    {% unless forloop.first %}</div><br/>{% endunless %}
+    {% unless forloop.first %}
+      {% unless is_newline %}</div><br/>{% endunless %}
+      {% assign is_newline = true %}
+    {% endunless %}
+
+
     <h2 id="y{{project.date | date: "%Y"}}">{{ currentdate }}</h2>
-    <div class="projects">
     {% assign date = currentdate %}
   {% endif %}
-    {% include project-card.html project = project %}
-  {% if forloop.last %}</div><br/>{% endif %}
+
+  {% if is_newline %}<div class="grid">{% endif %}
+
+  <div class="col-1-2">{% include project-card.html project = project %}</div>
+
+  {% unless is_newline %}</div>{% endunless %}
+
+  {% if forloop.last %}
+    {% if is_newline %}</div>{% endif %}
+    </div><br/>
+  {% endif %}
+
+  {% if is_newline %}
+    {% assign is_newline = false %}
+  {% else %}
+    {% assign is_newline = true %}
+  {% endif %}
 {% endfor %}

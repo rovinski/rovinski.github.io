@@ -2,36 +2,34 @@
   color: #9a9a9a;
 }
 
-#_main h1 {
-  line-height: 1;
+main {
+  h1 {
+    line-height: 1;
+  }
+
+  h1 + p {
+    font-size: 1.17rem;
+  }
+
+  h3 a {
+    padding-bottom: 0;
+  }
+
+  h3, h4 {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  header > p {
+    margin-bottom: 0;
+  }
 }
 
-.hint {
-  cursor: help;
-  float: right;
-}
-
-h3, h4 {
-  margin-top: 0;
-}
-
-h3 {
-  font-size: 1rem;
-}
-
-h2, h1 + h3 {
-  font-size: 1.25rem;
-}
-
-h3 a {
-  padding-bottom: 0;
-}
-
-.post-date {
-  margin-bottom: 0;
-}
-
-footer {
+// cite
+blockquote > footer {
   margin-bottom: 0;
 }
 
@@ -48,76 +46,80 @@ footer {
   padding: 0.125rem 0.5rem;
   color: #787878;
   line-height: 1.4;
-  /*font-size: 0.85rem;*/
+  /*font-size: smaller;*/
 }
 
-.Grid {
-  display: flex;
-  flex-wrap: wrap;
+.hint {
+  cursor: help;
+  float: right;
 }
 
-.Grid-cell {
-  flex: 1;
+$pad: 2.5rem;
+
+.grid {
+  background: white;
+  margin-left: -$pad;
+
+  &::after {
+    @extend .clearfix
+  }
 }
 
-/* With gutters */
-.Grid--gutters {
-  margin: 0 0 0 -2.5rem;
+[class*='col-'] {
+  float: left;
+  padding-left: $pad;
+  width: 100%;
 }
 
-.Grid--gutters > .Grid-cell {
-  padding: 0 0 0 2.5rem;
+@media screen and (min-width: 1024px - $scrollbar-width) {
+  .col-2-3 {
+    width: 61.8%
+  }
+  .col-1-3 {
+    width: 38.2%
+  }
 }
 
-.col-left {
-
+@media screen and (min-width: $break-point-font-2) {
+  [class*='col-'] {
+    width: 100%;
+  }
 }
 
-.col-right {
-
+@media screen and (min-width: 1280px - $scrollbar-width) {
+  .col-2-3 {
+    width: 61.8%
+  }
+  .col-1-3 {
+    width: 38.2%
+  }
 }
-
-// TODO: css class
-// span[title] {
-//   cursor: help;
-// }
 
 .symbol {
   float: right;
   color: #ddd;
-  // position: relative;
-  // top: 0.125rem;
 }
 
-dl  {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+dt, dd {
+  margin-bottom: .5rem;
 }
 
 dt {
   clear: both;
   float: left;
-  width: 3rem;
+  width: 2rem;
   text-align: center;
 
-  font-weight: bold;
-  margin-bottom: .5rem;
-}
-
-dt > span:first-child {
-  color: #9a9a9a;
+  [class*="icon-"] {
+    font-size: 1.17rem;
+    position: relative;
+    top: 2px;
+  }
 }
 
 dd {
   float: left;
   margin-left: 0;
-  margin-bottom: .5rem;
-  width: calc(100% - 3rem);
+  width: calc(100% - 2rem);
   padding-left: 0.5rem;
 }
-
-// .sidebar-social > ul {
-//   padding-left: 0;
-// }

@@ -13,18 +13,20 @@ layout: default
 
 {% assign resume = site.data.resume %}
 
-<article class="page Grid Grid--gutters" role="article">
-  <div class="Grid-cell" style="flex: 0 0 100%">
+<article class="page" role="article">
+  <div>
     {% assign basics = resume.basics %}
 
-    {% if basics.picture != null %}
+    {% if basics.picture.src != null %}
       {% include srcset-img.html class="me" img=basics.picture alt=basics.name %}
+    {% elsif basics.picture != null %}
+      <img class="me" src="{{ basics.picture }}" alt="{{ basics.name }}" />
     {% endif %}
 
     <header>
       <h1 class="page-title">{{ basics.name }}</h1>
       {% if basics.label %}
-        <p class="h3 post-date">{{ basics.label }}</h2>
+        <p class="h3 post-date">{{ basics.label }}</p>
       {% endif %}
    </header>
 
@@ -35,350 +37,364 @@ layout: default
     <hr/>
   </div>
 
-  <div class="Grid-cell" style="flex: 1 1 26rem">
-    <dl class="contact heading">
-      {% if basics.location %}
-        {% assign location = basics.location %}
-        {% if location.address or location.postalCode or location.city or location.region or location.countryCode %}
-          <dt>
-            <span class="icon-location"> </span>
-            <span class="sr-only">Location:</span>
-          </dt>
+    <dl class="grid contact heading">
+      <div class="col-2-3">
+        {% if basics.location %}
+          {% assign location = basics.location %}
+          {% if location.address or location.postalCode or location.city or location.region or location.countryCode %}
+            <dt class="faded">
+              <span class="icon-location" title="Location"></span>
+              <span class="sr-only">Location:</span>
+            </dt>
 
-          <dd>
-            {% if location.address %}
-              {{ location.address }},
-            {% endif %}
-
-            {% if location.address %}
-              {{ location.postalCode }},
-            {% endif %}
-
-            {% if location.address %}
-              {{ location.city }},
-            {% endif %}
-
-            {% if location.region %}
-              {{ location.region }},
-            {% endif %}
-
-            {% if location.countryCode %}
-              {% assign countryCode = location.countryCode | upcase %}
-              {% assign country = site.data.countries | where:"code", countryCode | first %}
-              {% if country %}
-                <span>{{ country.name }}</span>
-              {% else %}
-                <span>{{ location.countryCode }}</span>
+            <dd>
+              {% if location.address %}
+                {{ location.address }},
               {% endif %}
-            {% endif %}
+
+              {% if location.address %}
+                {{ location.postalCode }},
+              {% endif %}
+
+              {% if location.address %}
+                {{ location.city }},
+              {% endif %}
+
+              {% if location.region %}
+                {{ location.region }},
+              {% endif %}
+
+              {% if location.countryCode %}
+                {% assign countryCode = location.countryCode | upcase %}
+                {% assign country = site.data.countries | where:"code", countryCode | first %}
+                {% if country %}
+                  <span>{{ country.name }}</span>
+                {% else %}
+                  <span>{{ location.countryCode }}</span>
+                {% endif %}
+              {% endif %}
+            </dd>
+          {% endif %}
+        {% endif %}
+
+        {% if basics.email %}
+          <dt class="faded">
+            <span class="icon-envelop" title="Email"> </span>
+            <span class="sr-only">Email:</span>
+          </dt>
+          <dd>
+            <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
           </dd>
         {% endif %}
-      {% endif %}
 
-      {% if basics.email %}
-        <dt>
-          <span class="icon-envelop"> </span>
-          <span class="sr-only">Email:</span>
-        </dt>
-        <dd>
-          <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
-        </dd>
-      {% endif %}
+        {% if basics.phone %}
+          <dt class="faded">
+            <span class="icon-phone" title="Phone"></span>
+            <span class="sr-only">Phone:</span>
+          </dt>
+          <dd>
+            <a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>
+          </dd>
+        {% endif %}
 
-      {% if basics.phone %}
-        <dt>
-          <span class="icon-phone"> </span>
-          <span class="sr-only">Phone:</span>
-        </dt>
-        <dd>
-          <a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>
-        </dd>
-      {% endif %}
+        {% if basics.website %}
+          <dt class="faded">
+            <span class="icon-link" title="Website"></span>
+            <span class="sr-only">Website:</span>
+          </dt>
+          <dd>
+            <a href="{{ basics.website }}">{{ basics.website }}</a>
+          </dd>
+        {% endif %}
+      </div>
 
-      {% if basics.website %}
-        <dt>
-          <span class="icon-link"> </span>
-          <span class="sr-only">Web site:</span>
-        </dt>
-        <dd>
-          <a href="{{ basics.website }}">{{ basics.website }}</a>
-        </dd>
+      {% if basics.profiles.size > 0 %}
+        <div class="col-1-3">
+          {% for pro in basics.profiles %}
+            {% assign platform = pro.network | downcase %}
+            {% assign = data_social = site.data.social[platform] %}
+            {% assign icon = data_social.icon %}
+            {% if data_social.name %}
+              {% assign name = data_social.name %}
+            {% else %}
+              {% assign name = pro.network %}
+            {% endif %}
+            <dt class="faded">
+              <span class="icon-{% if icon %}{{ icon }}{% else %}link{% endif %}" title="{{ name }}"></span>
+              <span class="sr-only">{{ name }}:</span>
+            </dt>
+            <dd>
+              <a href="{{ pro.url }}">{{ pro.username }}</a>
+            </dd>
+          {% endfor %}
+        </div>
       {% endif %}
     </dl>
-  </div>
 
+  <div class="grid">
+    <div class="col-2-3">
+      {% if resume.work.size > 0 %}
+        <h2 class="h3 faded">Experience <span class="symbol icon-briefcase"></span></h2>
+        {% for work in resume.work %}
+          <hr/>
+          <header>
+            <p class="heading faded">
+              <time datetime="{{ work.startDate }}">{{ work.startDate | date: "%m/%Y"  }}</time>
+              —
+              <time datetime="{{ work.endDate }}">{{ work.endDate | date: "%m/%Y" }}</time>
+            </p>
+            <h3>
+              <span>{{ work.position }}</span>
+              <span class="faded"> at </span>
+              {% include link.html title=work.company href=work.website %}
+            </h3>
+          </header>
 
-  <div class="Grid-cell" style="flex: 1 0 16rem">
-    {% if basics.profiles %}
-      <div class="sidebar-social">
-        <ul>
-          {% for pro in basics.profiles %}
-            {% include social-list-item.html platform=pro.network url=pro.url icon=pro.icon %}
-          {% endfor %}
-        </ul>
-      </div>
-    {% elsif site.data.author.social %}
-      <div class="sidebar-social">
-        {% include social.html social = site.data.author.social %}
-      </div>
-    {% endif %}
-  </div>
+          {% include message.html text=work.summary %}
 
-  <div class="Grid-cell" style="flex: 1 1 26rem">
-    {% if resume.work.size > 0 %}
-      <h2 class="faded">Experience <span class="symbol icon-briefcase"></span></h2>
-      {% for work in resume.work %}
-        <hr/>
-        <p class="heading post-date">
-          <time datetime="{{ work.startDate }}">{{ work.startDate | date: "%m/%Y"  }}</time>
-          —
-          <time datetime="{{ work.endDate }}">{{ work.endDate | date: "%m/%Y" }}</time>
-        </p>
-        <h3>
-          <span>{{ work.position }}</span>
-          <span class="faded"> at </span>
-          {% include link.html title=work.company href=work.website %}
-        </h3>
+          <h4 class="sr-only">Highlights</h4>
+          <ul>
+            {% for highlight in work.highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
 
-        {% include message.html text=work.summary %}
+        {% endfor %}
 
-        <h4 class="sr-only">Highlights</h4>
-        <ul>
-          {% for highlight in work.highlights %}
-            <li>{{ highlight }}</li>
-          {% endfor %}
-        </ul>
-
-      {% endfor %}
-
-      <br/>
-    {% endif %}
-
-    {% if resume.volunteer.size > 0 %}
-      <h2 class="faded">Volunteer <span class="symbol icon-earth"></span></h2>
-      {% for vol in resume.volunteer %}
-        <hr/>
-        <p class="heading post-date">
-          <time datetime="{{ vol.startDate }}">{{ vol.startDate | date: "%m/%Y"  }}</time>
-          —
-          <time datetime="{{ vol.endDate }}">{{ vol.endDate | date: "%m/%Y"  }}</time>
-        </p>
-        <h3>
-          <span>{{ vol.position }}</span>
-          <span class="faded"> at </span>
-          {% include link.html title=vol.organization href=vol.website %}
-        </h3>
-
-        {% include message.html text=vol.summary %}
-
-        <h4 class="sr-only">Highlights</h4>
-        <ul>
-          {% for highlight in vol.highlights %}
-            <li>{{ highlight }}</li>
-          {% endfor %}
-        </ul>
-
-      {% endfor %}
-
-      <br/>
-    {% endif %}
-
-    {% if resume.education.size > 0 %}
-      <h2 class="faded">Education <span class="symbol icon-library"></span></h2>
-      {% for edu in resume.education %}
-        <hr/>
-        <p class="heading post-date">
-          <time datetime="{{ edu.startDate }}">{{ edu.startDate | date: "%m/%Y"  }}</time>
-          —
-          <time datetime="{{ edu.endDate }}">{{ edu.endDate | date: "%m/%Y"  }}</time>
-        </p>
-        <h3>
-          <span>{{ edu.studyType }}</span>
-          {% if edu.area %}
-            <span class="faded"> in </span>
-            <span>{{ edu.area }}</span>
-          {% endif %}
-          {% if edu.institution %}
-            <span class="faded"> at </span>
-            <span>{{ edu.institution }}</span>
-          {% endif %}
-          {% if edu.gpa %}
-            <span class="faded"> with GPA of </span>
-            <span>{{ edu.gpa }}</span>
-          {% endif %}
-        </h3>
-
-        <h4 class="faded">Courses</h4>
-        <ul>
-          {% for course in edu.courses %}
-            <li>{{ course }}</li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-
-      <br/>
-    {% endif %}
-
-    {% if resume.awards.size > 0 %}
-      <h2 class="faded">Awards <span class="symbol icon-trophy"></span></h2>
-      {% for awa in resume.awards %}
-        <hr/>
-        <p class="heading post-date">
-          <time datetime="{{ awa.date }}">{{ awa.date | date: "%m/%Y"  }}</time>
-        </p>
-        <h3>
-          <span>{{ awa.title }}</span>
-          {% if awa.awarder %}
-            <span class="faded"> by </span>
-            <span>{{ awa.awarder }}</span>
-          {% endif %}
-        </h3>
-
-        {% include message.html text=awa.summary %}
-      {% endfor %}
-
-      <br/>
-    {% endif %}
-
-    {% if resume.publications.size > 0 %}
-      <h2 class="faded">Publications <span class="symbol icon-book"></span></h2>
-      {% for pub in resume.publications %}
-        <hr/>
-        <p class="heading post-date">
-          <time datetime="{{ pub.releaseDate }}">{{ pub.releaseDate | date: "%m/%Y"  }}</time>
-        </p>
-        <h3>
-          {% include link.html title=pub.name href=pub.website %}
-          {% if pub.publisher %}
-            <span class="faded"> by </span>
-            <span>{{ pub.publisher }}</span>
-          {% endif %}
-        </h3>
-
-        {% include message.html text=pub.summary %}
-      {% endfor %}
-
-      <br/>
-    {% endif %}
-
-    {% if resume.references and resume.references.size > 0 %}
-      <h2 class="faded">References <span class="symbol icon-quotes-right"></span></h2>
-      <hr/>
-      {% for ref in resume.references %}
-        <blockquote>
-          <p>{{ ref.reference }}</p>
-          <footer>— <cite>{{ ref.name }}</cite></footer>
-        </blockquote>
         <br/>
-      {% endfor %}
+      {% endif %}
 
-      <br/>
-    {% endif %}
-  </div>
+      {% if resume.volunteer.size > 0 %}
+        <h2 class="h3 faded">Volunteer <span class="symbol icon-earth"></span></h2>
+        {% for vol in resume.volunteer %}
+          <hr/>
+          <header>
+            <p class="heading faded">
+              <time datetime="{{ vol.startDate }}">{{ vol.startDate | date: "%m/%Y"  }}</time>
+              —
+              <time datetime="{{ vol.endDate }}">{{ vol.endDate | date: "%m/%Y"  }}</time>
+            </p>
+            <h3>
+              <span>{{ vol.position }}</span>
+              <span class="faded"> at </span>
+              {% include link.html title=vol.organization href=vol.website %}
+            </h3>
+          </header>
 
-  <div class="Grid-cell" style="flex: 1 0 16rem">
-    {% if resume.languages.size > 0 %}
-      <h2 class="faded">Languages <span class="symbol icon-bubbles"></span></h2>
-      <hr/>
-      {% for lng in resume.languages %}
-        <h4>
-          {{ lng.language }}
-          <span class="faded">
-            <span class="sr-only"> | Fluency: </span>
-            {% assign fluency = lng.fluency | slugify %}
-            {% case fluency %}
-              {% when 5 or "native-or-bilingual-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-                </span>
-              {% when 4 or "full-professional-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
-                </span>
-              {% when 3 or "professional-working-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-                </span>
-              {% when 2 or "limited-working-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
-                </span>
-              {% when 1 or "elementary-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
-                </span>
-              {% when 0 or "no-proficiency" %}
-                <span class="hint" title="{{ lng.fluency }}">
-                  <span class="sr-only">{{ lng.fluency }}</span>
-                  <span class="icon-star-half"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
-                </span>
-              {% else %}
-                {{ lng.fluency }}
-            {% endcase %}
-          </span>
-        </h4>
-      {% endfor %}
-      <br/>
-    {% endif %}
+          {% include message.html text=vol.summary %}
 
-    {% if resume.skills.size > 0 %}
-      <h2 class="faded">Skills <span class="symbol icon-wrench"></span></h2>
-      {% for skl in resume.skills %}
-        <hr/>
-        <h4>
-          {{ skl.name }}
-          <span class="faded">
-            <span class="sr-only"> | Level: </span>
-            {% assign level = skl.level | slugify %}
-            {% case level %}
-              {% when 3 or "master" or "expert" or "senior" %}
-                <span class="hint" title="{{ skl.level }}">
-                  <span class="sr-only">{{ skl.level }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
-                </span>
-              {% when 2 or "intermediate" or "amateur"  %}
-                <span class="hint" title="{{ skl.level }}">
-                  <span class="sr-only">Intermediate</span>
-                  <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
-                </span>
-              {% when 1 or "beginner" or "novice" or "junior" %}
-                <span class="hint" title="{{ skl.level }}">
-                  <span class="sr-only">{{ skl.level }}</span>
-                  <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
-                </span>
-              {% else %}
-                {{ skl.level }}
-            {% endcase %}
-          </span>
-        </h4>
-        <span class="sr-only">Keywords: </span>
-        <ul class="tags">
-          {% for key in skl.keywords %}
-            <li class="tag">{{ key }}</li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-      <br/>
-    {% endif %}
+          <h4 class="sr-only">Highlights</h4>
+          <ul>
+            {% for highlight in vol.highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
 
-    {% if resume.interests.size > 0 %}
-      <h2 class="faded">Interests <span class="symbol icon-heart"></span></h2>
-      <hr/>
-      {% for int in resume.interests %}
-        <h4>{{ int.name }}</h4>
-        <ul class="tags">
-          {% for key in int.keywords %}
-            <li class="tag">{{ key }}</li>
-          {% endfor %}
-        </ul>
+        {% endfor %}
+
         <br/>
-      {% endfor %}
-      <br/>
-    {% endif %}
+      {% endif %}
+
+      {% if resume.education.size > 0 %}
+        <h2 class="h3 faded">Education <span class="symbol icon-library"></span></h2>
+        {% for edu in resume.education %}
+          <hr/>
+          <header>
+            <p class="heading faded">
+              <time datetime="{{ edu.startDate }}">{{ edu.startDate | date: "%m/%Y"  }}</time>
+              —
+              <time datetime="{{ edu.endDate }}">{{ edu.endDate | date: "%m/%Y"  }}</time>
+            </p>
+            <h3>
+              <span>{{ edu.studyType }}</span>
+              {% if edu.area %}
+                <span class="faded"> in </span>
+                <span>{{ edu.area }}</span>
+              {% endif %}
+              {% if edu.institution %}
+                <span class="faded"> at </span>
+                <span>{{ edu.institution }}</span>
+              {% endif %}
+              {% if edu.gpa %}
+                <span class="faded"> with GPA of </span>
+                <span>{{ edu.gpa }}</span>
+              {% endif %}
+            </h3>
+          </header>
+
+          <h4 class="faded">Courses</h4>
+          <ul>
+            {% for course in edu.courses %}
+              <li>{{ course }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+
+        <br/>
+      {% endif %}
+
+      {% if resume.awards.size > 0 %}
+        <h2 class="h3 faded">Awards <span class="symbol icon-trophy"></span></h2>
+        {% for awa in resume.awards %}
+          <hr/>
+          <header>
+            <p class="heading faded">
+              <time datetime="{{ awa.date }}">{{ awa.date | date: "%m/%Y"  }}</time>
+            </p>
+            <h3>
+              <span>{{ awa.title }}</span>
+              {% if awa.awarder %}
+                <span class="faded"> by </span>
+                <span>{{ awa.awarder }}</span>
+              {% endif %}
+            </h3>
+          </header>
+
+          {% include message.html text=awa.summary %}
+        {% endfor %}
+
+        <br/>
+      {% endif %}
+
+      {% if resume.publications.size > 0 %}
+        <h2 class="h3 faded">Publications <span class="symbol icon-book"></span></h2>
+        {% for pub in resume.publications %}
+          <hr/>
+          <header>
+            <p class="heading faded">
+              <time datetime="{{ pub.releaseDate }}">{{ pub.releaseDate | date: "%m/%Y"  }}</time>
+            </p>
+            <h3>
+              {% include link.html title=pub.name href=pub.website %}
+              {% if pub.publisher %}
+                <span class="faded"> by </span>
+                <span>{{ pub.publisher }}</span>
+              {% endif %}
+            </h3>
+          </header>
+
+          {% include message.html text=pub.summary %}
+        {% endfor %}
+
+        <br/>
+      {% endif %}
+
+      {% if resume.references and resume.references.size > 0 %}
+        <h2 class="h3 faded">References <span class="symbol icon-quotes-right"></span></h2>
+        <hr/>
+        {% for ref in resume.references %}
+          <blockquote>
+            <p>{{ ref.reference }}</p>
+            <footer>— <cite>{{ ref.name }}</cite></footer>
+          </blockquote>
+          <br/>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="col-1-3">
+      {% if resume.languages.size > 0 %}
+        <h2 class="h3 faded">Languages <span class="symbol icon-bubbles"></span></h2>
+        <hr/>
+        {% for lng in resume.languages %}
+          <h4>
+            {{ lng.language }}
+            <span class="faded">
+              <span class="sr-only"> | Fluency: </span>
+              {% assign fluency = lng.fluency | slugify %}
+              {% case fluency %}
+                {% when 5 or "native-or-bilingual-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                  </span>
+                {% when 4 or "full-professional-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
+                  </span>
+                {% when 3 or "professional-working-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% when 2 or "limited-working-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% when 1 or "elementary-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% when 0 or "no-proficiency" %}
+                  <span class="hint" title="{{ lng.fluency }}">
+                    <span class="sr-only">{{ lng.fluency }}</span>
+                    <span class="icon-star-half"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% else %}
+                  {{ lng.fluency }}
+              {% endcase %}
+            </span>
+          </h4>
+        {% endfor %}
+        <br/>
+      {% endif %}
+
+      {% if resume.skills.size > 0 %}
+        <h2 class="h3 faded">Skills <span class="symbol icon-wrench"></span></h2>
+        {% for skl in resume.skills %}
+          <hr/>
+          <h4>
+            {{ skl.name }}
+            <span class="faded">
+              <span class="sr-only"> | Level: </span>
+              {% assign level = skl.level | slugify %}
+              {% case level %}
+                {% when 3 or "master" or "expert" or "senior" %}
+                  <span class="hint" title="{{ skl.level }}">
+                    <span class="sr-only">{{ skl.level }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
+                  </span>
+                {% when 2 or "intermediate" or "amateur"  %}
+                  <span class="hint" title="{{ skl.level }}">
+                    <span class="sr-only">Intermediate</span>
+                    <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% when 1 or "beginner" or "novice" or "junior" %}
+                  <span class="hint" title="{{ skl.level }}">
+                    <span class="sr-only">{{ skl.level }}</span>
+                    <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
+                  </span>
+                {% else %}
+                  {{ skl.level }}
+              {% endcase %}
+            </span>
+          </h4>
+          <span class="sr-only">Keywords: </span>
+          <ul class="tags">
+            {% for key in skl.keywords %}
+              <li class="tag">{{ key }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+        <br/>
+      {% endif %}
+
+      {% if resume.interests.size > 0 %}
+        <h2 class="h3 faded">Interests <span class="symbol icon-heart"></span></h2>
+        <hr/>
+        {% for int in resume.interests %}
+          <h4>{{ int.name }}</h4>
+          <ul class="tags">
+            {% for key in int.keywords %}
+              <li class="tag">{{ key }}</li>
+            {% endfor %}
+          </ul>
+          <br/>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </article>
