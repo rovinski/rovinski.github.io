@@ -25,6 +25,12 @@ $pad: 1rem;
   }
 }
 
+@media print {
+  .col-1-2 {
+    width: 50%;
+  }
+}
+
 .card {
   border-radius: 2px;
   background: #FFF;
