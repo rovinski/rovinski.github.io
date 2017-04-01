@@ -1,29 +1,6 @@
 ---
-layout: default
+layout: about
 ---
-
-{% assign tag = site.data.tags[page.tag] %}
-
-{% if tag %}
-  {% assign title = tag.name %}
-  {% assign description = tag.description %}
-  {% assign posts = site.tags[page.tag] %}
-{% else %}
-  {% assign title = page.title %}
-  {% assign description = page.description %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% if title != null %}
-  {% capture heading %}<h1 class="page-title">{{ title }}</h1>{% endcapture %}
-  {% assign author = site.data.authors[site.author.authors_key] %}
-  {% include about-short.html heading=heading author=author %}
-
-  {% if description %}
-    {% capture desc %}{{ description }}{:.message}{% endcapture %}
-    {{ desc | markdownify }}
-  {% endif %}
-{% endif %}
 
 {{ content }}
 
