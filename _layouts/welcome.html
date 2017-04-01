@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+{% assign tag = site.data.tags[page.tag] %}
+
+{% if tag %}
+  {% assign title = tag.name %}
+  {% assign description = tag.description %}
+  {% assign posts = site.tags[page.tag] %}
+{% else %}
+  {% assign title = page.title %}
+  {% assign description = page.description %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% if title != null %}
+  {% capture heading %}<h1 class="page-title">{{ title }}</h1>{% endcapture %}
+  {% assign author = site.data.authors[site.author.authors_key] %}
+  {% include about-short.html heading=heading author=author %}
+
+  {% if description %}
+    {% capture desc %}{{ description }}{:.message}{% endcapture %}
+    {{ desc | markdownify }}
+  {% endif %}
+{% endif %}
+
+{{ content }}
+
+<!--[if gt IE 8]><!---->
+<style>
+  {% capture include_to_scssify %}
+  {% include styles/projects.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+</style>
+<!--<![endif]-->
+
+{% if page.selected_projects %}
+  <h2>Selected Projects</h2>
+  <br/>
+  {% assign is_newline = true %}
+  {% for project_slug in page.selected_projects %}
+    {% assign project = site.projects | where: "slug", project_slug | first %}
+
+    {% if is_newline %}<div class="grid">{% endif %}
+
+    <div class="col-1-2">{% include project-card.html project = project %}</div>
+
+    {% unless is_newline %}</div>{% endunless %}
+
+    {% if forloop.last %}
+      {% if is_newline %}</div>{% endif %}
+    {% endif %}
+
+    {% if is_newline %}
+      {% assign is_newline = false %}
+    {% else %}
+      {% assign is_newline = true %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <h2>Recent Projects</h2>
+  <br/>
+  {% assign ordered_projects = site.projects | sort:"date" | reverse %}
+  {% assign is_newline = true %}
+  {% for project in ordered_projects limit:2 %}
+    {% if is_newline %}<div class="grid">{% endif %}
+
+    <div class="col-1-2">{% include project-card.html project = project %}</div>
+
+    {% unless is_newline %}</div>{% endunless %}
+
+    {% if forloop.last %}
+      {% if is_newline %}</div>{% endif %}
+    {% endif %}
+
+    {% if is_newline %}
+      {% assign is_newline = false %}
+    {% else %}
+      {% assign is_newline = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if page.selected_posts %}
+  <h2>Selected Posts</h2>
+  <hr/>
+  <ul class="related-posts">
+    {% for post_slug in page.selected_posts %}
+      {% assign post = site.posts | where: "slug", post_slug | first %}
+      {% include post-list-item.html post=post format="%m/%d/%y" %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <h2>Recent Posts</h2>
+  <hr/>
+  <ul class="related-posts">
+    {% for post in posts limit:5 %}
+      {% include post-list-item.html post=post format="%m/%d/%y" %}
+    {% endfor %}
+  </ul>
+{% endif %}
