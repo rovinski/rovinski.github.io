@@ -1,9 +1,6 @@
 {% assign project = include.project %}
 
 <div class="card">
-  <h3 class="name">
-    <a href="{{ site.baseurl }}{{ project.url }}" data-flip="title">{{ project.title }}</a>
-  </h3>
   <a href="{{ site.baseurl }}{{ project.url }}" class="no-hover" data-flip="project">
     <div class="img sixteen-nine">
       {% if project.screenshot %}
@@ -11,6 +8,9 @@
       {% endif %}
     </div>
   </a>
+  <h3 class="name">
+    <a href="{{ site.baseurl }}{{ project.url }}" data-flip="title">{{ project.title }}</a>
+  </h3>
   {% if project.caption %}
     <div class="caption">{{ project.caption | markdownify }}</div>
   {% endif %}
