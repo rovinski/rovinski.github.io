@@ -17,10 +17,8 @@ layout: default
   <div>
     {% assign basics = resume.basics %}
 
-    {% if basics.picture.src != null %}
+    {% if basics.picture != null %}
       {% include srcset-img.html class="me" img=basics.picture alt=basics.name %}
-    {% elsif basics.picture != null %}
-      <img class="me" src="{{ basics.picture }}" alt="{{ basics.name }}" />
     {% endif %}
 
     <header>
