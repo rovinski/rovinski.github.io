@@ -17,14 +17,14 @@ layout: default
   <div>
     {% assign basics = resume.basics %}
 
-    {% if basics.picture != null %}
+    {% if basics.picture.size > 0 %}
       {% include srcset-img.html class="me" img=basics.picture alt=basics.name %}
     {% endif %}
 
     <header>
       <h1 class="page-title">{{ basics.name }}</h1>
       {% if basics.label %}
-        <p class="h3 post-date">{{ basics.label }}</p>
+        <p class="h3 faded">{{ basics.label }}</p>
       {% endif %}
    </header>
 
@@ -39,30 +39,36 @@ layout: default
       <div class="col-2-3">
         {% if basics.location %}
           {% assign location = basics.location %}
-          {% if location.address or location.postalCode or location.city or location.region or location.countryCode %}
+          {% if
+            location.address.size > 0 or
+            location.postalCode.size > 0 or
+            location.city.size > 0 or
+            location.region.size > 0 or
+            location.countryCode.size > 0
+          %}
             <dt class="faded">
               <span class="icon-location" title="Location"></span>
               <span class="sr-only">Location:</span>
             </dt>
 
             <dd>
-              {% if location.address %}
+              {% if location.address.size > 0 %}
                 {{ location.address }},
               {% endif %}
 
-              {% if location.address %}
+              {% if location.postalCode.size > 0 %}
                 {{ location.postalCode }},
               {% endif %}
 
-              {% if location.address %}
+              {% if location.city.size > 0 %}
                 {{ location.city }},
               {% endif %}
 
-              {% if location.region %}
+              {% if location.region.size > 0 %}
                 {{ location.region }},
               {% endif %}
 
-              {% if location.countryCode %}
+              {% if location.countryCode.size > 0 %}
                 {% assign countryCode = location.countryCode | upcase %}
                 {% assign country = site.data.countries | where:"code", countryCode | first %}
                 {% if country %}
@@ -75,7 +81,7 @@ layout: default
           {% endif %}
         {% endif %}
 
-        {% if basics.email %}
+        {% if basics.email.size > 0 %}
           <dt class="faded">
             <span class="icon-envelop" title="Email"> </span>
             <span class="sr-only">Email:</span>
@@ -85,7 +91,7 @@ layout: default
           </dd>
         {% endif %}
 
-        {% if basics.phone %}
+        {% if basics.phone.size > 0 %}
           <dt class="faded">
             <span class="icon-phone" title="Phone"></span>
             <span class="sr-only">Phone:</span>
@@ -95,7 +101,7 @@ layout: default
           </dd>
         {% endif %}
 
-        {% if basics.website %}
+        {% if basics.website.size > 0 %}
           <dt class="faded">
             <span class="icon-link" title="Website"></span>
             <span class="sr-only">Website:</span>
@@ -141,7 +147,7 @@ layout: default
               —
               <time datetime="{{ work.endDate }}">{{ work.endDate | date: "%m/%Y" }}</time>
             </p>
-            <h3>
+            <h3 class="h4">
               <span>{{ work.position }}</span>
               <span class="faded"> at </span>
               {% include link.html title=work.company href=work.website %}
@@ -172,7 +178,7 @@ layout: default
               —
               <time datetime="{{ vol.endDate }}">{{ vol.endDate | date: "%m/%Y"  }}</time>
             </p>
-            <h3>
+            <h3 class="h4">
               <span>{{ vol.position }}</span>
               <span class="faded"> at </span>
               {% include link.html title=vol.organization href=vol.website %}
@@ -203,17 +209,17 @@ layout: default
               —
               <time datetime="{{ edu.endDate }}">{{ edu.endDate | date: "%m/%Y"  }}</time>
             </p>
-            <h3>
+            <h3 class="h4">
               <span>{{ edu.studyType }}</span>
-              {% if edu.area %}
+              {% if edu.area.size > 0 %}
                 <span class="faded"> in </span>
                 <span>{{ edu.area }}</span>
               {% endif %}
-              {% if edu.institution %}
+              {% if edu.institution.size > 0 %}
                 <span class="faded"> at </span>
                 <span>{{ edu.institution }}</span>
               {% endif %}
-              {% if edu.gpa %}
+              {% if edu.gpa.size > 0 %}
                 <span class="faded"> with GPA of </span>
                 <span>{{ edu.gpa }}</span>
               {% endif %}
@@ -239,9 +245,9 @@ layout: default
             <p class="heading faded">
               <time datetime="{{ awa.date }}">{{ awa.date | date: "%m/%Y"  }}</time>
             </p>
-            <h3>
+            <h3 class="h4">
               <span>{{ awa.title }}</span>
-              {% if awa.awarder %}
+              {% if awa.awarder.size > 0 %}
                 <span class="faded"> by </span>
                 <span>{{ awa.awarder }}</span>
               {% endif %}
@@ -262,9 +268,9 @@ layout: default
             <p class="heading faded">
               <time datetime="{{ pub.releaseDate }}">{{ pub.releaseDate | date: "%m/%Y"  }}</time>
             </p>
-            <h3>
+            <h3 class="h4">
               {% include link.html title=pub.name href=pub.website %}
-              {% if pub.publisher %}
+              {% if pub.publisher.size > 0 %}
                 <span class="faded"> by </span>
                 <span>{{ pub.publisher }}</span>
               {% endif %}
@@ -277,7 +283,7 @@ layout: default
         <br/>
       {% endif %}
 
-      {% if resume.references and resume.references.size > 0 %}
+      {% if resume.references.size > 0 %}
         <h2 class="h3 faded">References <span class="symbol icon-quotes-right"></span></h2>
         <hr/>
         {% for ref in resume.references %}
