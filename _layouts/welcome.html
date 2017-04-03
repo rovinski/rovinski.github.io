@@ -15,7 +15,6 @@ layout: about
 
 {% if page.selected_projects %}
   <h2>Selected Projects</h2>
-  <br/>
   {% assign is_newline = true %}
   {% for project_slug in page.selected_projects %}
     {% assign project = site.projects | where: "slug", project_slug | first %}
@@ -38,7 +37,6 @@ layout: about
   {% endfor %}
 {% else %}
   <h2>Recent Projects</h2>
-  <br/>
   {% assign ordered_projects = site.projects | sort:"date" | reverse %}
   {% assign is_newline = true %}
   {% for project in ordered_projects limit:2 %}
@@ -60,6 +58,10 @@ layout: about
   {% endfor %}
 {% endif %}
 
+{% if page.more_projects %}
+  <span class="heading faded">» <a href="{{ page.more_projects | prepend:site.baseurl }}">More Projects</a></span>
+{% endif %}
+
 {% if page.selected_posts %}
   <h2>Selected Posts</h2>
   <hr/>
@@ -77,4 +79,8 @@ layout: about
       {% include post-list-item.html post=post format="%m/%d/%y" %}
     {% endfor %}
   </ul>
+{% endif %}
+
+{% if page.more_posts %}
+  <span class="heading faded">» <a href="{{ page.more_posts | prepend:site.baseurl }}">More Posts</a></span>
 {% endif %}

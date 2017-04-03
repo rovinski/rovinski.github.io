@@ -1,23 +1,35 @@
-.faded {
-  color: #9a9a9a;
-}
-
 main {
   h1 {
     margin-bottom: 0;
   }
 
-  h3, h4, .h3, .h4 {
-    margin-top: 0;
-    line-height: 1.4;
+  h2 {
+    margin-top: 1rem;
   }
 
-  h3 a {
-    padding-bottom: 0;
+  .h3 {
+    margin-top: 1rem;
+  }
+
+  .h4 {
+    margin-top: 0;
+  }
+
+  .subline {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .heading {
+    line-height: 1.55;
   }
 
   header > p {
     margin-bottom: 0;
+  }
+
+  h2 + hr {
+    margin-top: 0.5rem;
   }
 }
 
@@ -39,12 +51,41 @@ blockquote > footer {
   padding: 0.125rem 0.5rem;
   color: #787878;
   line-height: 1.4;
-  /*font-size: smaller;*/
 }
 
 .hint {
   cursor: help;
   float: right;
+}
+
+.symbol {
+  float: right;
+  color: #ddd;
+  margin-top: 4px;
+}
+
+dt, dd {
+  margin-bottom: .5rem;
+}
+
+dt {
+  clear: both;
+  float: left;
+  width: 2rem;
+  text-align: center;
+
+  [class*="icon-"] {
+    font-size: 1.17rem;
+    position: relative;
+    top: 2px;
+  }
+}
+
+dd {
+  float: left;
+  margin-left: 0;
+  width: calc(100% - 2rem);
+  padding-left: 0.5rem;
 }
 
 $pad: 2.5rem;
@@ -71,6 +112,9 @@ $pad: 2.5rem;
   .col-1-3 {
     width: 38.2%
   }
+  dt {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: $break-point-font-2) {
@@ -86,33 +130,4 @@ $pad: 2.5rem;
   .col-1-3 {
     width: 38.2%
   }
-}
-
-.symbol {
-  float: right;
-  color: #ddd;
-}
-
-dt, dd {
-  margin-bottom: .5rem;
-}
-
-dt {
-  clear: both;
-  float: left;
-  width: 2rem;
-  text-align: center;
-
-  [class*="icon-"] {
-    font-size: 1.17rem;
-    position: relative;
-    top: 2px;
-  }
-}
-
-dd {
-  float: left;
-  margin-left: 0;
-  width: calc(100% - 2rem);
-  padding-left: 0.5rem;
 }

@@ -24,9 +24,9 @@ layout: default
     <header>
       <h1 class="page-title">{{ basics.name }}</h1>
       {% if basics.label %}
-        <p class="h3 faded">{{ basics.label }}</p>
+        <p class="h3 faded subline">{{ basics.label }}</p>
       {% endif %}
-   </header>
+    </header>
 
     <hr/>
 
@@ -35,105 +35,103 @@ layout: default
     <hr/>
   </div>
 
-    <dl class="grid contact heading">
-      <div class="col-2-3">
-        {% if basics.location %}
-          {% assign location = basics.location %}
-          {% if
-            location.address.size > 0 or
-            location.postalCode.size > 0 or
-            location.city.size > 0 or
-            location.region.size > 0 or
-            location.countryCode.size > 0
-          %}
-            <dt class="faded">
-              <span class="icon-location" title="Location"></span>
-              <span class="sr-only">Location:</span>
-            </dt>
+  <dl class="grid contact">
+    <div class="col-2-3">
+      {% assign location = basics.location %}
+      {% if
+        location.address.size > 0 or
+        location.postalCode.size > 0 or
+        location.city.size > 0 or
+        location.region.size > 0 or
+        location.countryCode.size > 0
+      %}
+        <dt class="faded">
+          <span class="icon-location" title="Location"></span>
+          <span class="sr-only">Location:</span>
+        </dt>
 
-            <dd>
-              {% if location.address.size > 0 %}
-                {{ location.address }},
-              {% endif %}
-
-              {% if location.postalCode.size > 0 %}
-                {{ location.postalCode }},
-              {% endif %}
-
-              {% if location.city.size > 0 %}
-                {{ location.city }},
-              {% endif %}
-
-              {% if location.region.size > 0 %}
-                {{ location.region }},
-              {% endif %}
-
-              {% if location.countryCode.size > 0 %}
-                {% assign countryCode = location.countryCode | upcase %}
-                {% assign country = site.data.countries | where:"code", countryCode | first %}
-                {% if country %}
-                  <span>{{ country.name }}</span>
-                {% else %}
-                  <span>{{ location.countryCode }}</span>
-                {% endif %}
-              {% endif %}
-            </dd>
+        <dd class="h4">
+          {% if location.address.size > 0 %}
+            {{ location.address }},
           {% endif %}
-        {% endif %}
 
-        {% if basics.email.size > 0 %}
-          <dt class="faded">
-            <span class="icon-envelop" title="Email"> </span>
-            <span class="sr-only">Email:</span>
-          </dt>
-          <dd>
-            <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
-          </dd>
-        {% endif %}
+          {% if location.postalCode.size > 0 %}
+            {{ location.postalCode }},
+          {% endif %}
 
-        {% if basics.phone.size > 0 %}
-          <dt class="faded">
-            <span class="icon-phone" title="Phone"></span>
-            <span class="sr-only">Phone:</span>
-          </dt>
-          <dd>
-            <a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>
-          </dd>
-        {% endif %}
+          {% if location.city.size > 0 %}
+            {{ location.city }},
+          {% endif %}
 
-        {% if basics.website.size > 0 %}
-          <dt class="faded">
-            <span class="icon-link" title="Website"></span>
-            <span class="sr-only">Website:</span>
-          </dt>
-          <dd>
-            <a href="{{ basics.website }}">{{ basics.website }}</a>
-          </dd>
-        {% endif %}
-      </div>
+          {% if location.region.size > 0 %}
+            {{ location.region }},
+          {% endif %}
 
-      {% if basics.profiles.size > 0 %}
-        <div class="col-1-3">
-          {% for pro in basics.profiles %}
-            {% assign platform = pro.network | downcase %}
-            {% assign = data_social = site.data.social[platform] %}
-            {% assign icon = data_social.icon %}
-            {% if data_social.name %}
-              {% assign name = data_social.name %}
+          {% if location.countryCode.size > 0 %}
+            {% assign countryCode = location.countryCode | upcase %}
+            {% assign country = site.data.countries | where:"code", countryCode | first %}
+            {% if country %}
+              <span>{{ country.name }}</span>
             {% else %}
-              {% assign name = pro.network %}
+              <span>{{ location.countryCode }}</span>
             {% endif %}
-            <dt class="faded">
-              <span class="icon-{% if icon %}{{ icon }}{% else %}link{% endif %}" title="{{ name }}"></span>
-              <span class="sr-only">{{ name }}:</span>
-            </dt>
-            <dd>
-              <a href="{{ pro.url }}">{{ pro.username }}</a>
-            </dd>
-          {% endfor %}
-        </div>
+          {% endif %}
+        </dd>
       {% endif %}
-    </dl>
+
+      {% if basics.email.size > 0 %}
+        <dt class="faded">
+          <span class="icon-envelop" title="Email"> </span>
+          <span class="sr-only">Email:</span>
+        </dt>
+        <dd class="h4">
+          <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+        </dd>
+      {% endif %}
+
+      {% if basics.phone.size > 0 %}
+        <dt class="faded">
+          <span class="icon-phone" title="Phone"></span>
+          <span class="sr-only">Phone:</span>
+        </dt>
+        <dd class="h4">
+          <a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>
+        </dd>
+      {% endif %}
+
+      {% if basics.website.size > 0 %}
+        <dt class="faded">
+          <span class="icon-link" title="Website"></span>
+          <span class="sr-only">Website:</span>
+        </dt>
+        <dd class="h4">
+          <a href="{{ basics.website }}">{{ basics.website }}</a>
+        </dd>
+      {% endif %}
+    </div>
+
+    {% if basics.profiles.size > 0 %}
+      <div class="col-1-3">
+        {% for pro in basics.profiles %}
+          {% assign platform = pro.network | downcase %}
+          {% assign = data_social = site.data.social[platform] %}
+          {% assign icon = data_social.icon %}
+          {% if data_social.name %}
+            {% assign name = data_social.name %}
+          {% else %}
+            {% assign name = pro.network %}
+          {% endif %}
+          <dt class="faded">
+            <span class="icon-{% if icon %}{{ icon }}{% else %}link{% endif %}" title="{{ name }}"></span>
+            <span class="sr-only">{{ name }}:</span>
+          </dt>
+          <dd class="h4">
+            <a href="{{ pro.url }}">{{ pro.username }}</a>
+          </dd>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </dl>
 
   <div class="grid">
     <div class="col-2-3">
@@ -301,7 +299,7 @@ layout: default
         <h2 class="h3 faded">Languages <span class="symbol icon-bubbles"></span></h2>
         <hr/>
         {% for lng in resume.languages %}
-          <h4>
+          <h3 class="h4">
             {{ lng.language }}
             <span class="faded">
               <span class="sr-only"> | Fluency: </span>
@@ -341,7 +339,7 @@ layout: default
                   {{ lng.fluency }}
               {% endcase %}
             </span>
-          </h4>
+          </h3>
         {% endfor %}
         <br/>
       {% endif %}
@@ -350,7 +348,7 @@ layout: default
         <h2 class="h3 faded">Skills <span class="symbol icon-wrench"></span></h2>
         {% for skl in resume.skills %}
           <hr/>
-          <h4>
+          <h3 class="h4">
             {{ skl.name }}
             <span class="faded">
               <span class="sr-only"> | Level: </span>
@@ -375,7 +373,7 @@ layout: default
                   {{ skl.level }}
               {% endcase %}
             </span>
-          </h4>
+          </h3>
           <span class="sr-only">Keywords: </span>
           <ul class="tags">
             {% for key in skl.keywords %}
@@ -390,7 +388,7 @@ layout: default
         <h2 class="h3 faded">Interests <span class="symbol icon-heart"></span></h2>
         <hr/>
         {% for int in resume.interests %}
-          <h4>{{ int.name }}</h4>
+          <h3 class="h4">{{ int.name }}</h3>
           <ul class="tags">
             {% for key in int.keywords %}
               <li class="tag">{{ key }}</li>
