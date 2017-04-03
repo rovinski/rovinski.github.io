@@ -3,8 +3,6 @@ $pad: 1rem;
 .grid {
   background: white;
   margin-left: -$pad;
-  display: flex;
-  flex-wrap: wrap;
 
   &::after {
     @extend .clearfix
@@ -16,19 +14,16 @@ $pad: 1rem;
   padding-left: $pad;
   margin-bottom: $pad;
   width: 100%;
-  display: flex;
-  flex: 0 0 100%;
 }
 
 @media screen and (min-width: $break-point-font-1) {
   .col-1-2 {
     width: 50%;
-    flex: 0 0 50%;
   }
 }
 
 @media print {
-  .grid, [class*='col-'] {
+  .grid {
     display: block;
   }
 
