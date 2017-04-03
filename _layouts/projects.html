@@ -2,13 +2,8 @@
 layout: page
 ---
 
-<!--[if gt IE 8]>-->
-<style>
-  {% capture include_to_scssify %}
-  {% include styles/projects.scss %}
-  {% endcapture %}
-  {{ include_to_scssify | scssify }}
-</style>
+<!--[if gt IE 8]><!---->
+<style>{% capture include_to_scssify %}{% include styles/projects.scss %}{% endcapture %}{{ include_to_scssify | scssify }}</style>
 <!--<![endif]-->
 
 {% assign ordered_projects = site.projects | sort:"date" | reverse %}

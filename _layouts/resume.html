@@ -2,13 +2,8 @@
 layout: default
 ---
 
-<!--[if gt IE 8]>-->
-<style>
-  {% capture include_to_scssify %}
-  {% include styles/resume.scss %}
-  {% endcapture %}
-  {{ include_to_scssify | scssify }}
-</style>
+<!--[if gt IE 8]><!---->
+<style>{% capture include_to_scssify %}{% include styles/resume.scss %}{% endcapture %}{{ include_to_scssify | scssify }}</style>
 <!--<![endif]-->
 
 {% assign resume = site.data.resume %}
@@ -389,6 +384,7 @@ layout: default
         <hr/>
         {% for int in resume.interests %}
           <h3 class="h4">{{ int.name }}</h3>
+          <span class="sr-only">Keywords: </span>
           <ul class="tags">
             {% for key in int.keywords %}
               <li class="tag">{{ key }}</li>
