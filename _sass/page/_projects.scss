@@ -4,6 +4,7 @@ $pad: 1rem;
   background: white;
   margin-left: -$pad;
   display: flex;
+  flex-wrap: wrap;
 
   &::after {
     @extend .clearfix
