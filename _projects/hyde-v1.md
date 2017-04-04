@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Hyde (v1)
+title: Hyde v1
 date: 15 Oct 2013
 screenshot:
   src: '/hydejack/public/img/projects/hyde-v1@0,25x.png'
