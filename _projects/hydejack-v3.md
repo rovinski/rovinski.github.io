@@ -1,10 +1,21 @@
 ---
-layout: post
-title: Introducing Hydejack
-tags: [hydejack]
+layout: project
+title: 'Hydejack (v3)'
+date: 7 May 2016
+screenshot:
+  src: /hydejack/public/img/projects/hydejack-v3@0,25x.jpg
+  srcset:
+    2560w: /hydejack/public/img/projects/hydejack-v3.jpg
+    1280w:  /hydejack/public/img/projects/hydejack-v3@0,5x.jpg
+    640w:  /hydejack/public/img/projects/hydejack-v3@0,25x.jpg
+link: https://qwtel.com/hydejack
+github: https://github.com/qwtel/hydejack
+caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
 description: >
-  Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
-
+  A pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
+  [`@qwtel`{:style="background: rgba(255, 255, 255, 0.15)"}](https://twitter.com/qwtel) from
+  [Hyde](http://hyde.getpoole.com).
+  You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 ---
 
 ## Features

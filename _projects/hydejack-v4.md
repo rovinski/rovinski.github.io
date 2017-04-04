@@ -1,7 +1,16 @@
 ---
-layout: post
-title: 'v4: Social Media Impocalypse'
-tags: [hydejack]
+layout: project
+title: 'Hydejack (v4)'
+date: 30 Aug 2016
+screenshot:
+  src: /hydejack/public/img/projects/hydejack-v4@0,25x.jpg
+  srcset:
+    1920w: /hydejack/public/img/projects/hydejack-v4.jpg
+    960w:  /hydejack/public/img/projects/hydejack-v4@0,5x.jpg
+    480w:  /hydejack/public/img/projects/hydejack-v4@0,25x.jpg
+link: https://qwtel.com/hydejack
+github: https://github.com/qwtel/hydejack
+caption: This release adds *a lot* of social media icons.
 description: >
   This release adds *a lot* of social media icons and introduces a new default layout. It also breaks things, hence a new major release number.
 ---

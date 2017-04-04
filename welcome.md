@@ -2,16 +2,16 @@
 layout: welcome
 title: Welcome
 menu: true
-order: -1
+order: 1
 selected_projects:
- - hydejack
- - hydejack0
+ - hydejack-v6
+ - hyde-v2
 selected_posts:
  - javascripten
  - the-fast-one
  - social-media-impocalypse
 more_projects: /projects/
-more_posts:    /
+more_posts:    /posts/
 ---
 
 Below, find a selection the projects and posts I'm most proud of.
