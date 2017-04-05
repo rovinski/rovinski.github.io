@@ -59,7 +59,7 @@ layout: about
 {% endif %}
 
 {% if page.more_projects %}
-  <span class="heading faded"><a href="{{ page.more_projects | prepend:site.baseurl }}">More Projects</a> »</span>
+  <span class="heading faded"><a href="{{ page.more_projects | relative_url }}">More Projects</a> »</span>
 {% endif %}
 
 {% if page.selected_posts %}
@@ -82,5 +82,5 @@ layout: about
 {% endif %}
 
 {% if page.more_posts %}
-  <span class="heading faded"><a href="{{ page.more_posts | prepend:site.baseurl }}">More Posts</a> »</span>
+  <span class="heading faded"><a href="{{ page.more_posts | relative_url }}">More Posts</a> »</span>
 {% endif %}

@@ -9,7 +9,7 @@ layout: default
     <h1 class="page-title">{{ project.title }}</h1>
 
     <p class="post-date heading">
-      <a href="{{ site.baseurl }}/projects/" data-flip="title">Projects</a>
+      <a href="{{ '/projects' | relative_url }}" data-flip="title">Projects</a>
       |
       <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>
       <span style="float:right">
