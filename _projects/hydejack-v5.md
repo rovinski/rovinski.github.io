@@ -3,11 +3,11 @@ layout: project
 title: 'Hydejack v5'
 date: 16 Sep 2016
 screenshot:
-  src: /hydejack/public/img/projects/hydejack-v5@0,25x.jpg
+  src: /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
   srcset:
-    1920w: /hydejack/public/img/projects/hydejack-v5.jpg
-    960w:  /hydejack/public/img/projects/hydejack-v5@0,5x.jpg
-    480w:  /hydejack/public/img/projects/hydejack-v5@0,25x.jpg
+    1920w: /hydejack/assets/img/projects/hydejack-v5.jpg
+    960w:  /hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
+    480w:  /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
 link: https://qwtel.com/hydejack
 github: https://github.com/qwtel/hydejack
 caption: This release dramatically increases page load speed.
