@@ -117,7 +117,7 @@ layout: base
             {% assign name = pro.network %}
           {% endif %}
           <dt class="faded">
-            <span class="icon-{% if icon %}{{ icon }}{% else %}link{% endif %}" title="{{ name }}"></span>
+            <span class="{{ icon | default:'icon-link' }}" title="{{ name }}"></span>
             <span class="sr-only">{{ name }}:</span>
           </dt>
           <dd class="h4">
