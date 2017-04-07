@@ -13,5 +13,3 @@ selected_posts:
 more_projects: /projects/
 more_posts:    /posts/
 ---
-
-Below, find a selection the projects and posts I'm most proud of.
