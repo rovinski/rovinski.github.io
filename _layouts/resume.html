@@ -25,9 +25,11 @@ layout: base
 
     <hr/>
 
-    {{ basics.summary | markdownify }}
+    {% if basics.summary.size > 0 %}
+      {{ basics.summary | markdownify }}
+      <hr/>
+    {% endif %}
 
-    <hr/>
   </div>
 
   <dl class="grid contact">
