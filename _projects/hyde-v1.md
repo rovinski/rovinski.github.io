@@ -8,7 +8,7 @@ screenshot:
     2870w: '/hydejack/assets/img/projects/hyde-v1.png'
     1435w: '/hydejack/assets/img/projects/hyde-v1@0,5x.png'
     718w:  '/hydejack/assets/img/projects/hyde-v1@0,25x.png'
-github: https://github.com/mdo/hyde
+source: https://github.com/mdo/hyde
 caption: An elegant open source, mobile first theme for Jekyll.
 description: >
   An elegant open source, mobile first theme for Jekyll. It includes lightweight styles and placeholder content to get you up and running with a simple blog in no time.

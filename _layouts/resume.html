@@ -82,7 +82,7 @@ layout: base
           <span class="sr-only">Email:</span>
         </dt>
         <dd class="h4">
-          <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+          <a href="mailto:{{ basics.email }}" class="no-push-state">{{ basics.email }}</a>
         </dd>
       {% endif %}
 
@@ -92,7 +92,7 @@ layout: base
           <span class="sr-only">Phone:</span>
         </dt>
         <dd class="h4">
-          <a href="tel:{{ basics.phone }}">{{ basics.phone }}</a>
+          <a href="tel:{{ basics.phone }}" class="no-push-state">{{ basics.phone }}</a>
         </dd>
       {% endif %}
 
@@ -123,7 +123,7 @@ layout: base
             <span class="sr-only">{{ name }}:</span>
           </dt>
           <dd class="h4">
-            <a href="{{ pro.url }}">{{ pro.username }}</a>
+            {% include link.html href=pro.url title=pro.username %}
           </dd>
         {% endfor %}
       </div>

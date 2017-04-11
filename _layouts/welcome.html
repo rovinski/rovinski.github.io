@@ -11,12 +11,18 @@ layout: about
 {% if page.selected_projects %}
   <h2>Selected Projects</h2>
   {% assign is_newline = true %}
-  {% for project_slug in page.selected_projects %}
-    {% assign project = site.projects | where: "slug", project_slug | first %}
+  {% for project_id in page.selected_projects %}
+    {% assign project = site.projects | where:"id", project_id | first %}
 
     {% if is_newline %}<div class="grid">{% endif %}
 
-    <div class="col-1-2">{% include pro/project-card.html project = project %}</div>
+    <div class="col-1-2">
+      {% if project %}
+        {% include pro/project-card.html project = project %}
+      {% else %}
+        Project with id <code>{{ project_id }}</code> not found. Project ids look like <code>/projects/hydejack-v6</code>.
+      {% endif %}
+    </div>
 
     {% unless is_newline %}</div>{% endunless %}
 
@@ -61,9 +67,13 @@ layout: about
   <h2>Selected Posts</h2>
   <hr/>
   <ul class="related-posts">
-    {% for post_slug in page.selected_posts %}
-      {% assign post = site.posts | where: "slug", post_slug | first %}
-      {% include post-list-item.html post=post format="%m/%d/%y" %}
+    {% for post_id in page.selected_posts %}
+      {% assign post = site.posts | where:"id", post_id | first %}
+      {% if post %}
+        {% include post-list-item.html post=post format="%m/%d/%y" %}
+      {% else %}
+        <li>Post with id <code>{{ post_id }}</code> not found. Post ids look like <code>/2017/04/07/welcome-to-jekyll</code>.</li>
+      {% endif %}
     {% endfor %}
   </ul>
 {% else %}

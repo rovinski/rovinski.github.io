@@ -14,8 +14,8 @@ layout: base
       <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }}</time>
       <span style="float:right">
         {% if project.link %}<a href="{{ project.link }}">Live</a>{% endif %}
-        {% if project.link and project.github %}|{% endif %}
-        {% if project.github %}<a href="{{ project.github }}">Source</a>{% endif %}
+        {% if project.link and project.source %}|{% endif %}
+        {% if project.source %}<a href="{{ project.source }}">Source</a>{% endif %}
       </span>
     </p>
   </header>

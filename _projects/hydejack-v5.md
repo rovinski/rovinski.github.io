@@ -9,7 +9,7 @@ screenshot:
     960w:  /hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
     480w:  /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
 link: https://qwtel.com/hydejack
-github: https://github.com/qwtel/hydejack
+source: https://github.com/qwtel/hydejack/tree/v5.3.0
 caption: This release dramatically increases page load speed.
 description: >
   This release dramatically increases page load speed which matters to Google and visitors with slow connections alike.

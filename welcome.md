@@ -4,12 +4,19 @@ title: Welcome
 menu: true
 order: 1
 selected_projects:
- - hydejack-v6
- - hyde-v2
+  - /projects/hydejack-v5
+  - /projects/hyde-v2
 selected_posts:
- - javascripten
- - the-fast-one
- - social-media-impocalypse
+  - /2017/03/17/javascripten
+  - /2016/09/17/the-fast-one
+  - /2016/08/30/social-media-impocalypse
 more_projects: /projects/
-more_posts:    /posts/
+more_posts: /posts/
 ---
+
+{% comment %}
+  This layout automatically inserts the "about" photo and text from `./data/custom.yml` here.
+  If you prefer a blank page, change `layout: about` to `layout: page` in line 2.
+{% endcomment %}
+
+[add content]
