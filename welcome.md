@@ -7,6 +7,7 @@ selected_projects:
   - /projects/hydejack-v5
   - /projects/hyde-v2
 selected_posts:
+  - /2012/02/07/example-content
   - /2017/03/17/javascripten
   - /2016/09/17/the-fast-one
   - /2016/08/30/social-media-impocalypse
