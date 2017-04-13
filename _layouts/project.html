@@ -22,7 +22,12 @@ layout: base
 
   <div class="img lead sixteen-nine">
     {% if project.screenshot %}
-      {% include srcset-img.html img=project.screenshot alt="Screenshot" sizes="(min-width: 801px) 48rem, 100vw" %}
+      {%
+        include srcset-img.html
+        img=project.screenshot
+        alt="Screenshot"
+        sizes="(min-width: 96em) 48rem, (min-width: 50em) 40rem, 100vw"
+      %}
     {% endif %}
   </div>
 
