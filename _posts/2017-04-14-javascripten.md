@@ -1,16 +1,7 @@
 ---
-layout: project
-title: 'Hydejack v6'
-date: 14 Apr 2017
-screenshot:
-  src: /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
-  srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v6.jpg
-    960w:  /hydejack/assets/img/projects/hydejack-v6@0,5x.jpg
-    480w:  /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
-link: https://qwtel.com/hydejack
-source: https://github.com/qwtel/hydejack
-caption: This release adds a lot of JavaScript.
+layout: post
+title: 'v6: JavaScripten'
+tags: [hydejack]
 description: >
   The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers.
   This release addresses this by adding a layer of JavaScript, effectively turning the whole site into a single page app.

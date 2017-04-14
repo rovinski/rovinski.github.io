@@ -16,29 +16,19 @@ $pad: 1rem;
   padding-left: $pad;
   margin-bottom: $pad;
   width: 100%;
-  // flex: 0 0 100%;
   display: flex;
 }
 
 @media screen and (min-width: $break-point-1) {
-  .col-1-2 {
-    width: 50%;
-    // flex: 0 0 50%;
-  }
+  .col-1-2 { width: 50%; }
 }
 
 @media screen and (min-width: $break-point-2) {
-  .col-1-2 {
-    width: 100%;
-    // flex: 0 0 100%;
-  }
+  .col-1-2 { width: 100%; }
 }
 
 @media screen and (min-width: 60em) {
-  .col-1-2 {
-    width: 50%;
-    // flex: 0 0 50%;
-  }
+  .col-1-2 { width: 50%; }
 }
 
 @media print {
@@ -58,6 +48,7 @@ $pad: 1rem;
   border: 1px solid $border-color-light;
   text-align: center;
   padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
   contain: content;
 
   page-break-inside: avoid;
