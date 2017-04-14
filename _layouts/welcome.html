@@ -16,7 +16,7 @@ layout: about
 
     {% if is_newline %}<div class="grid">{% endif %}
 
-    <div class="col-1-2">
+    <div class="col col-1-2">
       {% if project %}
         {% include pro/project-card.html project = project %}
       {% else %}
@@ -43,7 +43,7 @@ layout: about
   {% for project in ordered_projects limit:2 %}
     {% if is_newline %}<div class="grid">{% endif %}
 
-    <div class="col-1-2">{% include pro/project-card.html project = project %}</div>
+    <div class="col col-1-2">{% include pro/project-card.html project = project %}</div>
 
     {% unless is_newline %}</div>{% endunless %}
 

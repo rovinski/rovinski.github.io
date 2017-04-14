@@ -9,31 +9,28 @@ layout: base
 {% assign resume = site.data.resume %}
 
 <article class="page" role="article">
-  <div>
-    {% assign basics = resume.basics %}
+  {% assign basics = resume.basics %}
 
-    {% if basics.picture.size > 0 %}
-      {% include srcset-img.html class="me" img=basics.picture alt=basics.name %}
+  {% if basics.picture.size > 0 %}
+    {% include srcset-img.html class="me" img=basics.picture alt=basics.name %}
+  {% endif %}
+
+  <header>
+    <h1 class="page-title">{{ basics.name }}</h1>
+    {% if basics.label %}
+      <p class="h3 faded subline">{{ basics.label }}</p>
     {% endif %}
+  </header>
 
-    <header>
-      <h1 class="page-title">{{ basics.name }}</h1>
-      {% if basics.label %}
-        <p class="h3 faded subline">{{ basics.label }}</p>
-      {% endif %}
-    </header>
+  <hr/>
 
+  {% if basics.summary.size > 0 %}
+    {{ basics.summary | markdownify }}
     <hr/>
-
-    {% if basics.summary.size > 0 %}
-      {{ basics.summary | markdownify }}
-      <hr/>
-    {% endif %}
-
-  </div>
+  {% endif %}
 
   <dl class="grid contact">
-    <div class="col-2-3">
+    <div class="col col-3-5">
       {% assign location = basics.location %}
       {% if
         location.address.size > 0 or
@@ -108,7 +105,7 @@ layout: base
     </div>
 
     {% if basics.profiles.size > 0 %}
-      <div class="col-1-3">
+      <div class="col col-2-5">
         {% for pro in basics.profiles %}
           {% assign platform = pro.network | downcase %}
           {% assign = data_social = site.data.social[platform] %}
@@ -131,7 +128,7 @@ layout: base
   </dl>
 
   <div class="grid">
-    <div class="col-2-3">
+    <div class="col col-3-5">
       {% if resume.work.size > 0 %}
         <h2 class="h3 faded">Experience <span class="symbol icon-briefcase"></span></h2>
         {% for work in resume.work %}
@@ -291,44 +288,44 @@ layout: base
       {% endif %}
     </div>
 
-    <div class="col-1-3">
+    <div class="col col-2-5">
       {% if resume.languages.size > 0 %}
         <h2 class="h3 faded">Languages <span class="symbol icon-bubbles"></span></h2>
         <hr/>
         {% for lng in resume.languages %}
           <h3 class="h4">
             {{ lng.language }}
-            <span class="faded">
+            <span class="faded pull-right">
               <span class="sr-only"> | Fluency: </span>
               {% assign fluency = lng.fluency | slugify %}
               {% case fluency %}
                 {% when 5 or "native-or-bilingual-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
                   </span>
                 {% when 4 or "full-professional-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>
                   </span>
                 {% when 3 or "professional-working-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
                   </span>
                 {% when 2 or "limited-working-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>
                   </span>
                 {% when 1 or "elementary-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
                   </span>
                 {% when 0 or "no-proficiency" %}
-                  <span class="hint" title="{{ lng.fluency }}">
+                  <span class="help" title="{{ lng.fluency }}">
                     <span class="sr-only">{{ lng.fluency }}</span>
                     <span class="icon-star-half"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
                   </span>
@@ -347,22 +344,22 @@ layout: base
           <hr/>
           <h3 class="h4">
             {{ skl.name }}
-            <span class="faded">
+            <span class="faded pull-right">
               <span class="sr-only"> | Level: </span>
               {% assign level = skl.level | slugify %}
               {% case level %}
                 {% when 3 or "master" or "expert" or "senior" %}
-                  <span class="hint" title="{{ skl.level }}">
+                  <span class="help" title="{{ skl.level }}">
                     <span class="sr-only">{{ skl.level }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>
                   </span>
                 {% when 2 or "intermediate" or "amateur"  %}
-                  <span class="hint" title="{{ skl.level }}">
+                  <span class="help" title="{{ skl.level }}">
                     <span class="sr-only">Intermediate</span>
                     <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>
                   </span>
                 {% when 1 or "beginner" or "novice" or "junior" %}
-                  <span class="hint" title="{{ skl.level }}">
+                  <span class="help" title="{{ skl.level }}">
                     <span class="sr-only">{{ skl.level }}</span>
                     <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>
                   </span>

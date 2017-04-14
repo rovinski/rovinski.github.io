@@ -3,22 +3,41 @@ $pad: 1rem;
 .grid {
   background: white;
   margin-left: -$pad;
+  display: flex;
+  flex-wrap: wrap;
 
   &::after {
     @extend .clearfix
   }
 }
 
-[class*='col-'] {
+.col {
   float: left;
   padding-left: $pad;
   margin-bottom: $pad;
   width: 100%;
+  // flex: 0 0 100%;
+  display: flex;
 }
 
 @media screen and (min-width: $break-point-1) {
   .col-1-2 {
     width: 50%;
+    // flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: $break-point-2) {
+  .col-1-2 {
+    width: 100%;
+    // flex: 0 0 100%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .col-1-2 {
+    width: 50%;
+    // flex: 0 0 50%;
   }
 }
 
@@ -27,7 +46,8 @@ $pad: 1rem;
     display: block;
   }
 
-  .col-1-2 {
+  .col {
+    display: block;
     width: 50%;
   }
 }

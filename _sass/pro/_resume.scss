@@ -42,6 +42,7 @@ blockquote > footer {
   list-style: none;
   padding-left: 0;
   margin: 0 -0.625rem;
+  clear: right;
 }
 
 .tag {
@@ -53,9 +54,12 @@ blockquote > footer {
   line-height: 1.4;
 }
 
-.hint {
-  cursor: help;
+.pull-right {
   float: right;
+}
+
+.help {
+  cursor: help;
 }
 
 .symbol {
@@ -99,19 +103,22 @@ $pad: 2.5rem;
   }
 }
 
-[class*='col-'] {
+.col {
   float: left;
   padding-left: $pad;
   width: 100%;
 }
 
 @media screen and (min-width: 60em) {
-  .col-2-3 {
-    width: 61.8%
+  .col-3-5 {
+    width: 60%
   }
-  .col-1-3 {
-    width: 38.2%
+  .col-2-5 {
+    width: 40%
   }
+}
+
+@media screen and (min-width: $break-point-2) {
   dt {
     text-align: left;
   }
