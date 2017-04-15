@@ -114,7 +114,7 @@ $pad: 2.5rem;
   .col-2-5 { width: 40% }
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: $break-point-2) {
   .col-3-5 { width: 100% }
   .col-2-5 { width: 100% }
 }

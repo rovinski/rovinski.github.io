@@ -1,13 +1,13 @@
 ---
 layout: project
-title: 'Hydejack v4'
+title: Hydejack v4
 date: 30 Aug 2016
 screenshot:
   src: /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
   srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v4.jpg
-    960w:  /hydejack/assets/img/projects/hydejack-v4@0,5x.jpg
-    480w:  /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
+    2560w: /hydejack/assets/img/projects/hydejack-v4.jpg
+    1280w: /hydejack/assets/img/projects/hydejack-v4@0,5x.jpg
+    640w:  /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
 link: https://qwtel.com/hydejack
 source: https://github.com/qwtel/hydejack/tree/v4.1.1
 caption: This release adds *a lot* of social media icons.
