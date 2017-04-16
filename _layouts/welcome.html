@@ -70,7 +70,7 @@ layout: about
     {% for post_id in page.selected_posts %}
       {% assign post = site.posts | where:"id", post_id | first %}
       {% if post %}
-        {% include post-list-item.html post=post format="%m/%d/%y" %}
+        {% include post-list-item.html post=post %}
       {% else %}
         <li>Post with id <code>{{ post_id }}</code> not found. Post ids look like <code>/2017/04/07/welcome-to-jekyll</code>.</li>
       {% endif %}
@@ -81,7 +81,7 @@ layout: about
   <hr/>
   <ul class="related-posts">
     {% for post in site.posts limit:5 %}
-      {% include post-list-item.html post=post format="%m/%d/%y" %}
+      {% include post-list-item.html post=post %}
     {% endfor %}
   </ul>
 {% endif %}
