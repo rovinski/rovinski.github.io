@@ -18,6 +18,11 @@ description: >
   You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 ---
 
+**This post is outdated and only included for legacy reasons.
+See the [Documentation]({{ site.baseurl }}{% link docs/6.0.0-beta3/index.md %}){:.heading data-flip="title"} for up-to-date instructions.**
+
+***
+
 ## Features
 Unlike Hyde, it's very opinionated about how you are going to use it.
 
