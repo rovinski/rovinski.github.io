@@ -12,5 +12,3 @@ selected_posts:
 more_projects: /projects/
 more_posts: /posts/
 ---
-
-[TODO]

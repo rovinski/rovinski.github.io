@@ -95,7 +95,6 @@ dd {
 $pad: 2.5rem;
 
 .grid {
-  background: white;
   margin-left: -$pad;
 
   &::after {
@@ -107,16 +106,6 @@ $pad: 2.5rem;
   float: left;
   padding-left: $pad;
   width: 100%;
-}
-
-@media screen and (min-width: 42em) {
-  .col-3-5 { width: 60% }
-  .col-2-5 { width: 40% }
-}
-
-@media screen and (min-width: $break-point-2) {
-  .col-3-5 { width: 100% }
-  .col-2-5 { width: 100% }
 }
 
 @media screen and (min-width: 64em) {
