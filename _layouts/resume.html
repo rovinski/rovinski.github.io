@@ -135,9 +135,9 @@ layout: base
           <hr/>
           <header>
             <p class="heading faded">
-              <time datetime="{{ work.startDate }}">{{ work.startDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ work.startDate }}">{{ work.startDate | date: "%b %Y"  }}</time>
               –
-              <time datetime="{{ work.endDate }}">{{ work.endDate | date: "%m/%Y" }}</time>
+              <time datetime="{{ work.endDate }}">{{ work.endDate | date: "%b %Y" }}</time>
             </p>
             <h3 class="h4">
               <span>{{ work.position }}</span>
@@ -166,9 +166,9 @@ layout: base
           <hr/>
           <header>
             <p class="heading faded">
-              <time datetime="{{ vol.startDate }}">{{ vol.startDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ vol.startDate }}">{{ vol.startDate | date: "%b %Y"  }}</time>
               –
-              <time datetime="{{ vol.endDate }}">{{ vol.endDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ vol.endDate }}">{{ vol.endDate | date: "%b %Y"  }}</time>
             </p>
             <h3 class="h4">
               <span>{{ vol.position }}</span>
@@ -197,9 +197,9 @@ layout: base
           <hr/>
           <header>
             <p class="heading faded">
-              <time datetime="{{ edu.startDate }}">{{ edu.startDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ edu.startDate }}">{{ edu.startDate | date: "%b %Y"  }}</time>
               –
-              <time datetime="{{ edu.endDate }}">{{ edu.endDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ edu.endDate }}">{{ edu.endDate | date: "%b %Y"  }}</time>
             </p>
             <h3 class="h4">
               <span>{{ edu.studyType }}</span>
@@ -235,7 +235,7 @@ layout: base
           <hr/>
           <header>
             <p class="heading faded">
-              <time datetime="{{ awa.date }}">{{ awa.date | date: "%m/%Y"  }}</time>
+              <time datetime="{{ awa.date }}">{{ awa.date | date: "%b %Y"  }}</time>
             </p>
             <h3 class="h4">
               <span>{{ awa.title }}</span>
@@ -258,7 +258,7 @@ layout: base
           <hr/>
           <header>
             <p class="heading faded">
-              <time datetime="{{ pub.releaseDate }}">{{ pub.releaseDate | date: "%m/%Y"  }}</time>
+              <time datetime="{{ pub.releaseDate }}">{{ pub.releaseDate | date: "%b %Y"  }}</time>
             </p>
             <h3 class="h4">
               {% include link.html title=pub.name href=pub.website %}
