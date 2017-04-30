@@ -3,11 +3,11 @@ layout: project
 title: Hyde v2
 date: 2 Jan 2014
 screenshot:
-  src: /hydejack/assets/img/projects/hyde-v2@0,25x.png
+  src: //qwtel.com/hydejack/assets/img/projects/hyde-v2@0,25x.png
   srcset:
-    2870w: /hydejack/assets/img/projects/hyde-v2.png
-    1435w: /hydejack/assets/img/projects/hyde-v2@0,5x.png
-    718w:  /hydejack/assets/img/projects/hyde-v2@0,25x.png
+    2870w: //qwtel.com/hydejack/assets/img/projects/hyde-v2.png
+    1435w: //qwtel.com/hydejack/assets/img/projects/hyde-v2@0,5x.png
+    718w:  //qwtel.com/hydejack/assets/img/projects/hyde-v2@0,25x.png
 link: http://hyde.getpoole.com
 source: https://github.com/poole/hyde
 caption: Hyde is a brazen two-column Jekyll theme.
