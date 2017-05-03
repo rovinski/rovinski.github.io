@@ -5,6 +5,7 @@ tags: [hydejack]
 description: >
   The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers.
   This release addresses this by adding a layer of JavaScript, effectively turning the whole site into a single page app.
+redirect_from: /2017/04/15/javascripten-beta/
 ---
 
 Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.
@@ -23,6 +24,7 @@ Pages are now loaded and swapped through JavaScript. This has a number of effect
 * Using `jekyll-feed` plugin (supported on GitHub Pages) instead of custom solution.
 * Added `about` layout.
 * Added `not-found` layout.
+* Added `redirect` layout
 
 See the [the migration guide]({{ site.baseurl }}{% link docs/6.0.0/migration.md %}) for instructions on how to upgrade.
 
@@ -39,12 +41,17 @@ See the [the migration guide]({{ site.baseurl }}{% link docs/6.0.0/migration.md 
 * The site is now printable.
 * The `blog` layout now only shows the excerpt instead of the full post.
 * Links to external pages are now marked with a symbol.
+* Added margin above social media icons to prevent accidental tapping
+* Added gem files so that `bundle install` and `bundle exec jekyll serve` work
+* Disabled HTML minification when running via `jekyll serve`
+* Added dingbat to signal end of post
 
 ## Fixes
 
 * Related posts is no longer blank for posts that do not belong to a category.
 * Footnotes now use the text version of "leftwards arrow with hook" instead of the emoji on iOS.
 * Text is no longer invisible while waiting for Google Fonts to load.
+* Always show scrollbar to prevent layout "jumps"
 
 ***
 
