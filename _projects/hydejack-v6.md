@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Hydejack v6
-date: 14 Apr 2017
+date: 03 May 2017
 screenshot:
   src: //qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
   srcset:
