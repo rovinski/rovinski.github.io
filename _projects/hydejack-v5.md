@@ -3,11 +3,11 @@ layout: project
 title: Hydejack v5
 date: 16 Sep 2016
 screenshot:
-  src: //qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
+  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
   srcset:
-    2560w: //qwtel.com/hydejack/assets/img/projects/hydejack-v5.jpg
-    1280w: //qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
-    640w:  //qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
+    2560w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5.jpg
+    1280w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
+    640w:  https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
 link: https://qwtel.com/hydejack
 source: https://github.com/qwtel/hydejack/tree/v5.3.0
 caption: This release dramatically increases page load speed.
