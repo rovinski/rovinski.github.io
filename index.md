@@ -23,7 +23,7 @@ Hydejack is a cutting-edge Jekyll theme that combines the best of static sites a
 
 Hydejack aims to be the complete package for professionals on the web. It features a blog suitable for both prose and technical documentation, a showcase for projects and a resume that fits with the rest of the design.
 
-## Features
+### Features
 * Full in-app page loading --- no Flash of White, no Flash of Unstyled Content[^1]
 * Advanced animations, inspired by Material Design
 * A customizable sidebar that turns into a touch-enabled app drawer on mobile
@@ -41,16 +41,16 @@ Hydejack aims to be the complete package for professionals on the web. It featur
 * Disqus comments
 * RSS feed
 * PSD templates for sidebar backgrounds and project screenshots
-* Print layout 
+* Print layout
 * [Extensive documentation]({{ site.baseurl }}{% link docs/6.1.0/index.md %})
 
-## Free Version
+### Free Version
 If you like the design and tech of Hydejack but all you need is a basic blog, you will be delighted to hear that there is also a [Free Version](http://qwtel.com/hydejack/).
 
-## Skin in the Game
+### Skin in the Game
 I use Hydejack for [my personal site](https://qwtel.com/), which is why the theme has features well beyond what you would expect from a normal Jekyll theme and why I have an interest in making it as good as I possibly can.
 
-## Licenses
+### Licenses
 Hydejack would not be possible without these assets and libraries:
 
 * IcoMoon Icons Free Version
@@ -62,7 +62,7 @@ Hydejack would not be possible without these assets and libraries:
 
 You can find the full list including copyright notices [here]({{ site.baseurl }}{% link docs/6.1.0/licenses.md %}).
 
-## Versions
+### Versions
 The current version is 6.1.0, which was released on 15 May 2017.
 You can find the full version history including patch notes [here]({{ site.baseurl }}{% link docs/6.1.0/versions.md %}).
 
