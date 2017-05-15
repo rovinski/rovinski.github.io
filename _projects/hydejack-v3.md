@@ -3,12 +3,12 @@ layout: project
 title: Hydejack v3
 date: 7 May 2016
 screenshot:
-  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
+  src: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v3@0,25x.jpg
   srcset:
-    2560w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3.jpg
-    1280w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,5x.jpg
-    640w:  https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
-link: https://qwtel.com/hydejack
+    2560w: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v3.jpg
+    1280w: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v3@0,5x.jpg
+    640w:  https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v3@0,25x.jpg
+link: https://qwtel.com/hydejack-pro
 source: https://github.com/qwtel/hydejack/tree/v3.0.2
 caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
 description: >

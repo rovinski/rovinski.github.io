@@ -3,12 +3,12 @@ layout: project
 title: Hydejack v6
 date: 03 May 2017
 screenshot:
-  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
+  src: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v6@0,25x.jpg
   srcset:
-    2560w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6.jpg
-    1280w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,5x.jpg
-    640w:  https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
-link: https://qwtel.com/hydejack
+    2560w: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v6.jpg
+    1280w: https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v6@0,5x.jpg
+    640w:  https://qwtel.com/hydejack-pro/assets/img/projects/hydejack-v6@0,25x.jpg
+link: https://qwtel.com/hydejack-pro
 source: https://github.com/qwtel/hydejack
 caption: This release adds a lot of JavaScript.
 description: >
