@@ -59,7 +59,7 @@ permalink:           pretty
 
 # Pagination configuration (used by the `blog` layout)
 paginate:            5
-paginate_path:       '/page-:num/'
+paginate_path:       '/blog/page-:num/'
 
 # If you are updating form a previous verison of Hydejack, uncomment the two lines below,
 # so that existing subscribers to your feed continue to receive updates.
