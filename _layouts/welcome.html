@@ -60,7 +60,7 @@ layout: about
 {% endif %}
 
 {% if page.more_projects %}
-  <span class="heading faded"><a href="{{ page.more_projects | relative_url }}">More Projects</a> »</span>
+  <span class="heading faded">More <a href="{{ page.more_projects.href | relative_url }}" data-flip="title">{{ page.more_projects.title }}</a> »</span>
 {% endif %}
 
 {% if page.selected_posts %}
@@ -87,5 +87,5 @@ layout: about
 {% endif %}
 
 {% if page.more_posts %}
-  <span class="heading faded"><a href="{{ page.more_posts | relative_url }}">More Posts</a> »</span>
+  <span class="heading faded">More <a href="{{ page.more_posts.href | relative_url }}" data-flip="title">{{ page.more_posts.title }}</a> »</span>
 {% endif %}
