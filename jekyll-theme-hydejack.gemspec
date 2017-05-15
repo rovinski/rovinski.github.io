@@ -1,7 +1,7 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-hydejack"
+  spec.name          = "jekyll-theme-hydejack-pro"
   spec.version       = "6.1.0"
   spec.authors       = ["Florian Klampfer"]
   spec.email         = ["f.klampfer@gmail.com"]

@@ -1,26 +1,3 @@
-MIT License
-
-Copyright (c) 2017 Florian Klampfer.
-
-This software also uses portions of the Hyde project, which is
-MIT licensed with the following copyright:
-
-Copyright (c) 2013 Mark Otto.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This Jekyll theme is comprised of two parts:
+(1) The code also contained in the free version of the theme (https://qwtel.com/hydejack/) is MIT licensed. You can read the license here: https://qwtel.com/hydejack/docs/6.1.0/licenses/#hydejack-free-version
+(2) All other parts of the theme including, but not limited to files located in folders called "pro" are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended

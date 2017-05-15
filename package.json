@@ -1,5 +1,5 @@
 {
-  "name": "hydejack",
+  "name": "hydejack-pro",
   "version": "6.1.0",
   "description": "Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).",
   "scripts": {
@@ -13,7 +13,6 @@
     "resume": "json2yaml _data/resume.json > _data/resume.yml"
   },
   "author": "Florian Klampfer <f.klampfer@gmail.com> (https://qwtel.com)",
-  "license": "MIT",
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
