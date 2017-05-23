@@ -15,10 +15,9 @@ description: >
   This release adds *a lot* of social media icons and introduces a new default layout. It also breaks things, hence a new major release number.
 ---
 
-**This post is outdated and only included for legacy reasons.
-See the [Documentation]({{ site.baseurl }}{% link docs/6.1.0/index.md %}){:.heading data-flip="title"} for up-to-date instructions.**
-
-***
+**NOTE**: This post is outdated and only included for legacy reasons.
+See the [Documentation]({{ site.baseurl }}{% link docs/6.1.1/index.md %}){:.heading data-flip="title"} for up-to-date instructions.
+{:.message}
 
 ## Breaking
 * Structure of `_config.yml` has changed

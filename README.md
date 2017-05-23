@@ -24,7 +24,7 @@ Hydejack aims to be the complete package for professionals on the web. It featur
 * RSS feed
 * PSD templates for sidebar backgrounds and project screenshots
 * Print layout
-* [Extensive documentation](https://qwtel.com/hydejack-pro/docs/6.1.0/)
+* [Extensive documentation](https://qwtel.com/hydejack-pro/docs/latest/)
 
 ## Demo
 It's best to just [see it in action](https://qwtel.com/hydejack-pro/).
@@ -46,11 +46,11 @@ Hydejack would not be possible without these assets and libraries:
 * corejs
 * web-animations-js
 
-You can find the full list including copyright notices [here](https://qwtel.com/hydejack-pro/docs/6.1.0/licenses/).
+You can find the full list including copyright notices [here](https://qwtel.com/hydejack-pro/docs/latest/licenses/).
 
 ## Versions
-The current version is 6.1.0, which was released on 15 May 2017.
-You can find the full version history including patch notes [here](https://qwtel.com/hydejack-pro/docs/6.1.0/versions/).
+The current version is 6.1.1, which was released on 23 May 2017.
+You can find the full version history including patch notes [here](https://qwtel.com/hydejack-pro/docs/latest/versions/).
 
 ***
 
