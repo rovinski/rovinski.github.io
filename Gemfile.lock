@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-hydejack (6.1.0)
+    jekyll-theme-hydejack-pro (6.1.0)
       jekyll (~> 3.4)
       jekyll-paginate (~> 1.1)
 
@@ -64,8 +64,8 @@ DEPENDENCIES
   jekyll-feed (~> 0.9)
   jekyll-redirect-from (~> 0.12.1)
   jekyll-sitemap (~> 1.0)
-  jekyll-theme-hydejack!
+  jekyll-theme-hydejack-pro!
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.14.6
+   1.15.0
