@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Hydejack PRO
+title:               Hydejack
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages (and not using custom domains!)
@@ -10,7 +10,7 @@ url:                 https://qwtel.com
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
-baseurl:             /hydejack-pro
+baseurl:             /hydejack
 
 # A very short description  of your page
 tagline:             A pretentious two-column Jekyll theme.

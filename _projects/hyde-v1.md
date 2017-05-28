@@ -3,11 +3,11 @@ layout: project
 title: Hyde v1
 date: 15 Oct 2013
 screenshot:
-  src: https://qwtel.com/hydejack-pro/assets/img/projects/hyde-v1@0,25x.png
+  src: /hydejack/assets/img/projects/hyde-v1@0,25x.jpg
   srcset:
-    2870w: https://qwtel.com/hydejack-pro/assets/img/projects/hyde-v1.png
-    1435w: https://qwtel.com/hydejack-pro/assets/img/projects/hyde-v1@0,5x.png
-    718w:  https://qwtel.com/hydejack-pro/assets/img/projects/hyde-v1@0,25x.png
+    1920w: /hydejack/assets/img/projects/hyde-v1.jpg
+    960w: /hydejack/assets/img/projects/hyde-v1@0,5x.jpg
+    480w: /hydejack/assets/img/projects/hyde-v1@0,25x.jpg
 source: https://github.com/mdo/hyde
 caption: An elegant open source, mobile first theme for Jekyll.
 description: >
