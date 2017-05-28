@@ -1,6 +1,6 @@
 ---
 layout: welcome
-title: Welcome
+title: Welcome*
 selected_projects:
   - /projects/hydejack-v6
   - /projects/hyde-v2
