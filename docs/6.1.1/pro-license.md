@@ -1,4 +1,9 @@
-# PRO License
+---
+layout: page
+title: PRO License
+redirect_from: /docs/latest/pro-license/
+---
+
 ## License Summary
 * License does not expire
 * Commercial use allowed
@@ -137,4 +142,4 @@
     relation to this license and to compensate Licensor for any legal fees, cost or attorney fees should any claim
     brought by Licensee against Licensor be denied, in part or in full.
 
-[1]: https://qwtel.com/hydejack/docs/latest/licenses/
+[1]: {{ site.baseurl }}{% link docs/6.1.1/licenses.md %}
