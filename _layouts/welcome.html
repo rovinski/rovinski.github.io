@@ -71,7 +71,7 @@ layout: about
 {% if page.selected_posts %}
   <h2>Selected Posts</h2>
   <hr/>
-  <ul class="related-posts">
+  <ul class="related-posts" style="margin-bottom:2rem">
     {% for post_path in page.selected_posts %}
       {% assign post = site.posts | where:"path", post_path | first %}
       {% if post %}
