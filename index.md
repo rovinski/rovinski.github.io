@@ -24,6 +24,6 @@ Oh, and there's also the welcome layout, which features the author's *short desc
 [^1]: Applies after the initial page load.
 [^2]: Actual page load speed depends on your hosting provider as well as discipline regarding resolution of images and usage of 3rd party plugins.
 
-[blog]: {{ site.baseurl }}{% link blog.md %}
-[portfolio]: {{ site.baseurl }}{% link projects.md %}
-[resume]: {{ site.baseurl }}{% link resume.md %}
+[blog]: https://qwtel.com/hydejack/blog/
+[portfolio]: https://qwtel.com/hydejack/projects/
+[resume]: https://qwtel.com/hydejack/resume/
