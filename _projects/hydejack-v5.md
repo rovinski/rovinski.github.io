@@ -8,10 +8,13 @@ screenshot:
     1920w: /hydejack/assets/img/projects/hydejack-v5.jpg
     960w: /hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
     480w: /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
-source: https://github.com/qwtel/hydejack/tree/v5
 caption: This release dramatically increases page load speed.
 description: >
   This release dramatically increases page load speed which matters to Google and visitors with slow connections alike.
+links:
+  -
+    title: Source
+    url: https://github.com/qwtel/hydejack/tree/v5
 ---
 
 **NOTE**: This post is outdated and only included for legacy reasons.

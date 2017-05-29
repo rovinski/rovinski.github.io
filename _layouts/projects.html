@@ -6,7 +6,7 @@ layout: page
 <style>{% capture include_to_scssify %}{% include pro/styles/projects.scss %}{% endcapture %}{{ include_to_scssify | scssify }}</style>
 <!--<![endif]-->
 
-{% assign ordered_projects = site.projects | sort:"date" | reverse %}
+{% assign ordered_projects = site[page.show_collection] | sort:"date" | reverse %}
 {% assign is_newline = true %}
 
 {% for project in ordered_projects %}

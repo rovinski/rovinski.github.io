@@ -8,13 +8,16 @@ screenshot:
     1920w: /hydejack/assets/img/projects/hydejack-v3.jpg
     960w: /hydejack/assets/img/projects/hydejack-v3@0,5x.jpg
     480w: /hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
-source: https://github.com/qwtel/hydejack/tree/v3.0.2
 caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
 description: >
   A pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
   [`@qwtel`{:style="background: rgba(255, 255, 255, 0.15)"}](https://twitter.com/qwtel) from
   [Hyde](http://hyde.getpoole.com).
   You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
+links:
+  -
+    title: Source
+    url: https://github.com/qwtel/hydejack/tree/v3.0.2
 ---
 
 **NOTE**: This post is outdated and only included for legacy reasons.

@@ -8,11 +8,17 @@ screenshot:
     1920w: /hydejack/assets/img/projects/hydejack-v6.jpg
     960w: /hydejack/assets/img/projects/hydejack-v6@0,5x.jpg
     480w: /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
-source: https://github.com/qwtel/hydejack/tree/v6
 caption: This release adds a lot of JavaScript.
 description: >
   The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers.
   This release addresses this by adding a layer of JavaScript, effectively turning the whole site into a single page app.
+links:
+  -
+    title: Download
+    url: https://github.com/qwtel/hydejack/releases/tag/v6.2.0
+  -
+    title: Source
+    url: https://github.com/qwtel/hydejack/tree/v6
 ---
 
 Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.

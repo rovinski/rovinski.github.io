@@ -2,17 +2,13 @@
 layout: welcome
 title: Welcome*
 selected_projects:
-  - /projects/hydejack-v6
-  - /projects/hyde-v2
+  - _projects/hydejack-v6.md
+  - _projects/hyde-v2.md
 selected_posts:
-  - /2017/05/03/javascripten
-  - /2012/02/07/example-content
-more_projects:
-  title: Projects
-  href: /projects/
-more_posts:
-  title: Posts
-  href: /posts/
+  - _posts/2017-05-03-javascripten.md
+  - _posts/2012-02-07-example-content.md
+more_projects: projects.md
+more_posts: posts.md
 ---
 
 ## Hydejack

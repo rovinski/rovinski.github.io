@@ -8,10 +8,13 @@ screenshot:
     1920w: /hydejack/assets/img/projects/hydejack-v4.jpg
     960w: /hydejack/assets/img/projects/hydejack-v4@0,5x.jpg
     480w: /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
-source: https://github.com/qwtel/hydejack/tree/v4
 caption: This release adds *a lot* of social media icons.
 description: >
   This release adds *a lot* of social media icons and introduces a new default layout. It also breaks things, hence a new major release number.
+links:
+  -
+    title: Source
+    url: https://github.com/qwtel/hydejack/tree/v4
 ---
 
 **NOTE**: This post is outdated and only included for legacy reasons.
