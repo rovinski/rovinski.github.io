@@ -1,6 +1,6 @@
 ---
 layout: resume
-title: Resume*
+title: Resume
 menu: true
 order: 4
 ---

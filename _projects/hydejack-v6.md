@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Hydejack v6*
+title: Hydejack v6
 date: 03 May 2017
 screenshot:
   src: /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
