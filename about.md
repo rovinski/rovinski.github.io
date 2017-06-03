@@ -38,9 +38,7 @@ Both the PRO *and* free version includes all of the features listed below:
 [^1]: Applies after the initial page load.  
 [^2]: Actual page load speed depends on your hosting provider as well as discipline regarding resolution of images and usage of 3rd party plugins.
 
-[blog]: https://qwtel.com/hydejack/blog/
-[portfolio]: https://qwtel.com/hydejack/projects/
-[resume]: https://qwtel.com/hydejack/resume/
-[welcome]: https://qwtel.com/hydejack/
-[pro]: https://qwtel.com/hydejack/docs/6.3.0/pro-license/
-[docs]: https://qwtel.com/hydejack/docs/6.3.0/
+[blog]: {{ '/blog/' | relative_url }}
+[portfolio]: {{ '/projects/' | relative_url }}
+[resume]: {{ '/resume/' | relative_url }}
+[welcome]: {{ '/' | relative_url }}
