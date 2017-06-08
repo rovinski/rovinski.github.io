@@ -33,7 +33,7 @@ Should you have any trouble with the theme, you can send me an email at [f.klamp
 [blog]: https://qwtel.com/hydejack/blog/
 [portfolio]: https://qwtel.com/hydejack/projects/
 [resume]: https://qwtel.com/hydejack/resume/
-[documentation]: https://qwtel.com/hydejack/docs/6.3.0/
-[installation]: https://qwtel.com/hydejack/docs/6.3.0/installation/
-[configuration]: https://qwtel.com/hydejack/docs/6.3.0/configuration/
-[migration]: https://qwtel.com/hydejack/docs/6.3.0/migration/
+[documentation]: https://qwtel.com/hydejack/docs/6.4.0/
+[installation]: https://qwtel.com/hydejack/docs/6.4.0/installation/
+[configuration]: https://qwtel.com/hydejack/docs/6.4.0/configuration/
+[migration]: https://qwtel.com/hydejack/docs/6.4.0/migration/
