@@ -34,6 +34,8 @@ Both the PRO *and* free version includes all of the features listed below:
 * RSS feed
 * Print layout
 
+Open `about.md` to edit this text.
+
 
 [^1]: Applies after the initial page load.  
 [^2]: Actual page load speed depends on your hosting provider as well as discipline regarding resolution of images and usage of 3rd party plugins.

@@ -19,6 +19,8 @@ One that would let me write posts in markdown with my own editor,
 one that didn't look awful buy modern design standards and one that felt snappy on a mobile phone.
 That and more is now Hydejack. I hope you enjoy it [as much as I do](https://qwtel.com).
 
+Open `index.md` to edit this text.
+
 ## First Steps
 Please start by reading the [Documentation].
 Specifically, the chapters below should be relevant to you:
@@ -28,10 +30,14 @@ Specifically, the chapters below should be relevant to you:
 * [Migration] -- You can skip this if you haven't used Hydejack before.
 {:.related-posts.faded}
 
+Open `index.md` to edit this text.
+
 ## Support
 Should you have any trouble with the theme, you can send me an email at [mail@qwtel.com](mailto:mail@qwtel.com).
-I try to answer within 1 business day, but
-sometimes I answer instantly when a mail makes it though the priority filter.
+I try to answer within 1 business day.
+Sometimes I answer instantly, when a mail makes it through the priority filter 😉
+
+Open `index.md` to edit this text.
 
 [blog]: https://qwtel.com/hydejack/blog/
 [portfolio]: https://qwtel.com/hydejack/projects/
