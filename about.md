@@ -13,6 +13,8 @@ Hydejack is a cutting-edge Jekyll theme that combines the best of static sites a
 
 It aims to be the complete package for professionals on the web. It features a blog suitable for both prose and technical documentation, a showcase for projects and a resume that fits with the rest of the design.
 
+Open `about.md` to edit this text.
+
 ### Features
 Both the PRO *and* free version includes all of the features listed below:
 
