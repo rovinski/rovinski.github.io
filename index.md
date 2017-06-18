@@ -32,7 +32,7 @@ Start by reading the [Documentation]. Specifically, the chapters below should be
 Open `index.md` to edit this text.
 
 ## Support
-Should you have any trouble with the theme, you can send me an email at [mail@qwtel.com](mailto:mail@qwtel.com).
+Should you have any trouble with the theme, you can send mail to [mail@qwtel.com](mailto:mail@qwtel.com).
 I try to answer within 1 business day.
 Sometimes I answer instantly, when a mail makes it through the priority filter 😉
 
