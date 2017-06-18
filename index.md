@@ -22,12 +22,11 @@ That and more is now Hydejack. I hope you enjoy it [as much as I do](https://qwt
 Open `index.md` to edit this text.
 
 ## First Steps
-Please start by reading the [Documentation].
-Specifically, the chapters below should be relevant to you:
+Start by reading the [Documentation]. Specifically, the chapters below should be relevant to you:
 
 * [Installation] -- How to install and run Hydejack.
-* [Configuration] Once Jekyll is running you can start with basic configuration.
 * [Migration] -- You can skip this if you haven't used Hydejack before.
+* [Configuration] -- Once Jekyll is running you can start with basic configuration.
 {:.related-posts.faded}
 
 Open `index.md` to edit this text.
