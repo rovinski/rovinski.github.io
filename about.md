@@ -38,11 +38,21 @@ Both the PRO *and* free version includes all of the features listed below:
 
 Open `about.md` to edit this text.
 
+### [Documentation][docs]
+Hydejack is documented extensively.
+You can read it [here][docs], or in the [repository's wiki][wiki], or [download the PDF][download].
+
+Open `about.md` to edit this text.
 
 [^1]: Applies after the initial page load.  
 [^2]: Actual page load speed depends on your hosting provider as well as discipline regarding resolution of images and usage of 3rd party plugins.
 
-[blog]: {{ '/blog/' | relative_url }}
-[portfolio]: {{ '/projects/' | relative_url }}
-[resume]: {{ '/resume/' | relative_url }}
-[welcome]: {{ '/' | relative_url }}
+[blog]: https://qwtel.com/hydejack/blog/
+[portfolio]: https://qwtel.com/hydejack/projects/
+[resume]: https://qwtel.com/hydejack/resume/
+[welcome]: https://qwtel.com/hydejack/
+[pro]: https://qwtel.com/hydejack/docs/6.4.0/pro-license/
+[docs]: https://qwtel.com/hydejack/docs/6.4.0/
+
+[wiki]: https://github.com/qwtel/hydejack/wiki
+[download]: https://github.com/qwtel/hydejack/releases/tag/v6.4.0
