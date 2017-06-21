@@ -3,11 +3,11 @@ layout: project
 title: Hydejack v4
 date: 30 Aug 2016
 screenshot:
-  src: /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
+  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
   srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v4.jpg
-    960w: /hydejack/assets/img/projects/hydejack-v4@0,5x.jpg
-    480w: /hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
+    1920w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v4.jpg
+    960w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v4@0,5x.jpg
+    480w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v4@0,25x.jpg
 caption: This release adds *a lot* of social media icons.
 description: >
   This release adds *a lot* of social media icons and introduces a new default layout.

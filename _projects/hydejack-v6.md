@@ -3,11 +3,11 @@ layout: project
 title: Hydejack v6
 date: 03 May 2017
 screenshot:
-  src: /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
+  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
   srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v6.jpg
-    960w: /hydejack/assets/img/projects/hydejack-v6@0,5x.jpg
-    480w: /hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
+    1920w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6.jpg
+    960w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,5x.jpg
+    480w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v6@0,25x.jpg
 caption: This release adds a lot of JavaScript.
 description: >
   The last release made the theme fast in the eyes of Google, but not so much in the eyes of its readers.

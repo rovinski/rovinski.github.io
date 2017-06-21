@@ -3,11 +3,11 @@ layout: project
 title: Hydejack v5
 date: 16 Sep 2016
 screenshot:
-  src: /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
+  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
   srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v5.jpg
-    960w: /hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
-    480w: /hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
+    1920w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5.jpg
+    960w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,5x.jpg
+    480w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v5@0,25x.jpg
 caption: This release dramatically increases page load speed.
 description: >
   This release dramatically increases page load speed which matters to Google and visitors with slow connections alike.

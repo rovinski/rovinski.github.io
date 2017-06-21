@@ -3,11 +3,11 @@ layout: project
 title: Hydejack v3
 date: 7 May 2016
 screenshot:
-  src: /hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
+  src: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
   srcset:
-    1920w: /hydejack/assets/img/projects/hydejack-v3.jpg
-    960w: /hydejack/assets/img/projects/hydejack-v3@0,5x.jpg
-    480w: /hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
+    1920w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3.jpg
+    960w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,5x.jpg
+    480w: https://qwtel.com/hydejack/assets/img/projects/hydejack-v3@0,25x.jpg
 caption: A pretentious two-column Jekyll theme, stolen by `@qwtel` from Hyde.
 description: >
   A pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
