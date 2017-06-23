@@ -51,8 +51,8 @@ Open `about.md` to edit this text.
 [portfolio]: https://qwtel.com/hydejack/projects/
 [resume]: https://qwtel.com/hydejack/resume/
 [welcome]: https://qwtel.com/hydejack/
-[pro]: https://qwtel.com/hydejack/docs/6.4.0/pro-license/
-[docs]: https://qwtel.com/hydejack/docs/6.4.0/
+[pro]: https://qwtel.com/hydejack/docs/6.4.1/pro-license/
+[docs]: https://qwtel.com/hydejack/docs/6.4.1/
 
 [wiki]: https://github.com/qwtel/hydejack/wiki
-[download]: https://github.com/qwtel/hydejack/releases/tag/v6.4.0
+[download]: https://github.com/qwtel/hydejack/releases/tag/v6.4.1
