@@ -24,7 +24,7 @@ That and more is now Hydejack. I hope you enjoy it [as much as I do](https://qwt
 Open `index.md` to edit this text.
 
 ## First Steps
-Start by reading the [Documentation]. Specifically, the chapters below should be relevant to you:
+Start by reading the [Documentation][docs]. Specifically, the chapters below should be relevant to you:
 
 * [Installation] -- How to install and run Hydejack.
 * [Migration] -- You can skip this if you haven't used Hydejack before.
@@ -43,7 +43,7 @@ Open `index.md` to edit this text.
 [blog]: https://qwtel.com/hydejack/blog/
 [portfolio]: https://qwtel.com/hydejack/projects/
 [resume]: https://qwtel.com/hydejack/resume/
-[documentation]: https://qwtel.com/hydejack/docs/6.4.0/
-[installation]: https://qwtel.com/hydejack/docs/6.4.0/installation/
-[configuration]: https://qwtel.com/hydejack/docs/6.4.0/configuration/
-[migration]: https://qwtel.com/hydejack/docs/6.4.0/migration/
+[docs]: https://qwtel.com/hydejack/docs/6.5.0/
+[installation]: https://qwtel.com/hydejack/docs/6.5.0/installation/
+[configuration]: https://qwtel.com/hydejack/docs/6.5.0/configuration/
+[migration]: https://qwtel.com/hydejack/docs/6.5.0/migration/
