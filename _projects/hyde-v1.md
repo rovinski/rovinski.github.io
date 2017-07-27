@@ -18,7 +18,7 @@ author: mdo
 ---
 
 **NOTE**: This post is outdated and only included for legacy reasons.
-See the [Documentation][docs]{:.heading data-flip="title"} for up-to-date instructions.
+See the [Documentation][docs] for up-to-date instructions.
 {:.message}
 
 **Hyde 1.x has been deprecated for the upcoming Hyde 2.0, [available here](https://github.com/poole/hyde).**
@@ -107,4 +107,4 @@ Open sourced under the [MIT license](LICENSE.md).
 
 <3
 
-[docs]: {{ site.baseurl }}{% link docs/6.5.0/index.md %}
+[docs]: https://qwtel.com/hydejack/docs/

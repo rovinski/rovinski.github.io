@@ -19,16 +19,16 @@ Thank you for buying the PRO version of Hydejack! ðŸŽ‰
 One year ago I was looking for a blogging platform but couldn't find it:
 One that would let me write posts in markdown with my own editor,
 one that didn't look awful buy modern design standards and one that felt snappy on a mobile phone.
-That and more is now Hydejack. I hope you enjoy it [as much as I do](https://qwtel.com).
+That and more is now Hydejack. I hope you enjoy it [as much as I do](https://qwtel.com/).
 
 Open `index.md` to edit this text.
 
 ## First Steps
-Start by reading the [Documentation][docs]. Specifically, the chapters below should be relevant to you:
+Start by reading the [Documentation][docs]{:.heading data-flip="title"}. Specifically, the chapters below should be relevant to you:
 
-* [Installation] -- How to install and run Hydejack.
-* [Migration] -- You can skip this if you haven't used Hydejack before.
-* [Configuration] -- Once Jekyll is running you can start with basic configuration.
+* [Installation]{:.heading data-flip="title"} -- How to install and run Hydejack.
+* [Migration]{:.heading data-flip="title"} -- You can skip this if you haven't used Hydejack before.
+* [Configuration]{:.heading data-flip="title"} -- Once Jekyll is running you can start with basic configuration.
 {:.related-posts.faded}
 
 Open `index.md` to edit this text.
@@ -40,10 +40,10 @@ Sometimes I answer instantly, when a mail makes it through the priority filter ð
 
 Open `index.md` to edit this text.
 
-[blog]: https://qwtel.com/hydejack/blog/
-[portfolio]: https://qwtel.com/hydejack/projects/
-[resume]: https://qwtel.com/hydejack/resume/
-[docs]: https://qwtel.com/hydejack/docs/6.5.0/
-[installation]: https://qwtel.com/hydejack/docs/6.5.0/installation/
-[configuration]: https://qwtel.com/hydejack/docs/6.5.0/configuration/
-[migration]: https://qwtel.com/hydejack/docs/6.5.0/migration/
+[blog]: blog.md
+[portfolio]: projects.md
+[resume]: resume.md
+[docs]: docs/6.5.0/index.md
+[installation]: docs/6.5.0/installation.md
+[configuration]: docs/6.5.0/configuration.md
+[migration]: docs/6.5.0/migration.md

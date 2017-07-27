@@ -25,7 +25,7 @@ links:
 * Now defaults to the `blog` layout, old style is available via `blog-by-tag` layout, see `archive.html`.
 
 **NOTE**: This post is outdated and only included for legacy reasons.
-See the [Documentation](https://qwtel.com/hydejack/docs/) for up-to-date instructions.
+See the [Documentation][docs] for up-to-date instructions.
 {:.message}
 
 ## New features
@@ -46,4 +46,6 @@ See the [Documentation](https://qwtel.com/hydejack/docs/) for up-to-date instruc
 
 ***
 
-[Get *Social Media Impocalypse* on GitHub](https://github.com/qwtel/hydejack/releases/tag/v4.0.0)
+[Get *Social Media Impocalypse* on GitHub](https://github.com/qwtel/hydejack/releases)
+
+[docs]: https://qwtel.com/hydejack/docs/
