@@ -7,7 +7,6 @@ redirect_from:
 ---
 
 Copyright (c) 2017 Florian Klampfer.
-Licensed under MIT.
 
 ## Attributions
 Appropriate credit as per Creative Commons licenses.
