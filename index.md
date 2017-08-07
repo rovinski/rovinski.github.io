@@ -44,7 +44,7 @@ Open `index.md` to edit this text.
 [blog]: blog.md
 [portfolio]: projects.md
 [resume]: resume.md
-[docs]: docs/6.5.0/index.md
-[installation]: docs/6.5.0/installation.md
-[configuration]: docs/6.5.0/configuration.md
-[migration]: docs/6.5.0/migration.md
+[docs]: docs/6.6.0/index.md
+[installation]: docs/6.6.0/installation.md
+[configuration]: docs/6.6.0/configuration.md
+[migration]: docs/6.6.0/migration.md
