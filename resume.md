@@ -1,11 +1,12 @@
 ---
 layout: resume
 title: Résumé*
-menu: true
-order: 4
 description: >
   This is the description of your resume page as it will be shown on search engines.
-  You'll probably want to modify this text in `resume.md` and maybe set `no_description` to `false`.
+  Open `resume.md` to edit this text.
+  You can hide it (only visible to search engines) by setting `no_description` to `true`.
 no_description: false
+menu: true
+order: 4
 rel: me
 ---

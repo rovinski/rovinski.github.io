@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Download
+description: >
+  Open `download.md` to edit this text.
 menu: true
 order: 7
 ---
