@@ -7,6 +7,6 @@ description: >
   You can hide it (only visible to search engines) by setting `no_description` to `true`.
 no_description: false
 menu: true
-order: 4
+order: 3
 rel: me
 ---
