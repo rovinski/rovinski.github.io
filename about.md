@@ -49,7 +49,7 @@ Open `about.md` to edit this text.
 [portfolio]: projects.md
 [resume]: resume.md
 [welcome]: index.md
-[docs]: docs/7.0.0-beta.3/index.md
+[docs]: docs/7.0.0-beta.4/index.md
 
 [wiki]: https://github.com/qwtel/hydejack/wiki
 [download]: https://github.com/qwtel/hydejack/releases
