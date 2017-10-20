@@ -1,43 +1,11 @@
 ---
-layout: welcome
-title: Hydejack
-description: >
-  **Hydejack** is a cutting-edge Jekyll theme that combines the best of static sites and modern web apps.
-  It features a suite of JavaScript that makes the page feel like an app,
-  without sacrificing backwards-compatibility, page-load speed or SEO.
-  Open `index.md` to edit this text.
-selected_projects:
-  - _projects/default.md
-  - _projects/pretentious.md
-  - _projects/hyde.md
-  - _projects/oldschool.md
-  - _projects/solid-red.md
-  - _projects/solid-orange.md
-selected_posts:
-  - _posts/2017-07-27-better-gem-support.md
-  - _posts/2017-06-21-related-projects-and-data-tables.md
-  - _posts/2017-06-06-third-party-scripts.md
-  - _posts/2017-05-03-javascripten.md
-  - _posts/2012-02-07-example-content.md
-more_projects: projects.md
-more_posts: posts.md
-content_separator: <!--more-->
+layout: page
+title: Download
+menu: true
+order: 7
 ---
 
-**Hydejack** aims to be the complete package for professionals on the web.
-It features a blog suitable for both prose and technical documentation,
-a showcase for projects and a resume that fits with the rest of the design.
-
-> Your presence on the web --- A [blog], a [portfolio] and a [resume].
-{:.lead}
-
-**Hydejack** is highly customizable and lets you achieve a variety of styles.
-Below you can find a selection of variations that are included.
-
-<!--more-->
-
-## [Download](download.md){:.flip-title}
-There are two versions of **Hydejack**: The Free Version includes basic blogging functionality,
+There are two versions of Hydejack: The Free Version includes basic blogging functionality,
 as did previous versions of the theme.
 The new PRO Version includes additional features for professionals:
 A [portfolio], a [resume] layout and a [welcome] page to feature your favorite projects and posts.
@@ -80,7 +48,7 @@ All versions include *all* of these features:
 * Print layout
 
 ## Free Version
-The Free Version features the design and tech of **Hydejack**, but only supports basic blogging.
+The Free Version features the design and tech of Hydejack, but only supports basic blogging.
 
 [Download on GitHub][github] – or – [Use the RubyGem][gem]
 
@@ -92,6 +60,7 @@ a [welcome] page to introduce yourself to visitors.
 [Buy Now - $59][buy]{:.btn.btn-primary} [^3]
 
 {% include author.html author=site.data.authors.qwtel heading="Contact" heading_id="contact" %}
+
 
 [^1]: Applies after the initial page load.  
 [^2]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.  
