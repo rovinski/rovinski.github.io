@@ -45,11 +45,19 @@ Open `about.md` to edit this text.
 [^1]: Applies after the initial page load.  
 [^2]: Actual page load speed depends on your hosting provider as well as discipline regarding resolution of images and usage of 3rd party plugins.
 
-[blog]: blog.md
-[portfolio]: projects.md
-[resume]: resume.md
-[welcome]: index.md
-[docs]: docs/7.0.0-beta.4/index.md
+[blog]: https://qwtel.com/hydejack/blog/
+[portfolio]: https://qwtel.com/hydejack/projects/
+[resume]: https://qwtel.com/hydejack/resume/
+[welcome]: https://qwtel.com/hydejack/
+[license]: LICENSE.md
+[pro]: licenses/PRO.md
+[docs]: docs/7.0.0/index.md
+
+[github]: https://github.com/qwtel/hydejack/releases/tag/v7.0.0-beta.5
+[gem]: https://rubygems.org/gems/jekyll-theme-hydejack/versions/7.0.0-beta.5
+[buy]: https://app.simplegoods.co/i/AQTTVBOE
 
 [wiki]: https://github.com/qwtel/hydejack/wiki
 [download]: https://github.com/qwtel/hydejack/releases
+
+[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fqwtel.com%2Fhydejack%2F
