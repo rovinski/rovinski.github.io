@@ -2,10 +2,9 @@
 layout: welcome
 title: Hydejack
 description: >
-  **Hydejack** is a cutting-edge Jekyll theme that combines the best of static sites and modern web apps.
-  It features a suite of JavaScript that makes the page feel like an app,
-  without sacrificing backwards-compatibility, page-load speed or SEO.
-  Open `index.md` to edit this text.
+  **Hydejack** is a Jekyll theme with JavaScript powers, combining the best of static sites and modern web apps.
+  It features a suite of JavaScript that makes the page feel like an app, without sacrificing backwards-compatibility,
+  page-load speed or SEO.
 image: /assets/img/default.jpg
 selected_projects:
   - _projects/default.md
@@ -69,7 +68,7 @@ Both versions include *all* of these features:
 * Higher *perceived speed* thanks to content pre-fetching
 * [Syntax highlighting](#syntax-highlighting), powered by [Rouge]
 * [LaTeX math blocks](#latex-math-blocks), powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages[^4]
+* Change the wording of built-in strings and possibly translate in other languages
 * Support for categories and tags
 * Built-in icons for many social networks
 * Simple and semantic HTML — can be viewed even with text-based browsers
