@@ -6,6 +6,7 @@ description: >
   It features a suite of JavaScript that makes the page feel like an app,
   without sacrificing backwards-compatibility, page-load speed or SEO.
   Open `index.md` to edit this text.
+image: /assets/img/default.jpg
 selected_projects:
   - _projects/default.md
   - _projects/pretentious.md
