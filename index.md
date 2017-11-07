@@ -1,6 +1,33 @@
 ---
+<<<<<<< HEAD
 layout: page
 title: Thank You!
+=======
+layout: cover
+title: Hydejack
+description: >
+  **Hydejack** is a Jekyll theme with JavaScript powers, combining the best of static sites and modern web apps.
+  It features a suite of JavaScript that makes the page feel like an app, without sacrificing backwards-compatibility,
+  page-load speed or SEO.
+image: /assets/img/projects/default.jpg
+hide_description: true
+selected_projects:
+  - _projects/default.md
+  - _projects/pretentious.md
+  - _projects/hyde.md
+  - _projects/oldschool.md
+  - _projects/solid-cyan.md
+  - _projects/solid-blue.md
+more_projects: variations.md
+selected_posts:
+  - _posts/2017-11-23-example-content.md
+  - _posts/2017-11-17-hydejacks-new-design.md
+  - _posts/2017-07-27-better-gem-support.md
+  - _posts/2017-06-21-related-projects-and-data-tables.md
+  - _posts/2017-06-06-third-party-scripts.md
+more_posts: posts.md
+content_separator: <!--more-->
+>>>>>>> ab1f133e... wip
 ---
 
 Thank you for buying the PRO version of Hydejack! 🎉
