@@ -20,7 +20,7 @@ accent_color: '#4fb1ba'
 accent_image: /assets/img/sidebar-bg.jpg
 ---
 
-![Typeface](../assets/img/default-1.jpg){:.lead}
+![Typeface](../assets/img/default-1.jpg){:.lead width="1060" height="430"}
 
 It features everything that's hot right now:
 * Aerial shot of a beach
@@ -28,7 +28,7 @@ It features everything that's hot right now:
 * ...with slab serifs
 * A theme color that's also the coat of a 1957 Chevy (almost)
 
-![1957 Chevy](https://upload.wikimedia.org/wikipedia/commons/b/b1/57_Chevy_210.jpg)
+![1957 Chevy](https://upload.wikimedia.org/wikipedia/commons/b/b1/57_Chevy_210.jpg){:width="383" height="230"}
 
 Introducing Hydejack's new default theme...
 
