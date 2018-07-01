@@ -43,6 +43,7 @@ rm -r \
   _zip/hydejack-pro-8.0.0-beta.1/upgrade/assets/resume.json
 
 find _zip/hydejack-pro-8.0.0-beta.1/upgrade/ -name 'my-*' -delete
+find _zip/hydejack-pro-8.0.0-beta.1/ -name '.DS_Store' -delete
 
 # Generate PDFs.
 # This assumes the next version is already online at qwtel.com
