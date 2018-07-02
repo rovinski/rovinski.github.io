@@ -1,11 +1,11 @@
 #!/bin/bash
 
-version=8.0.0-beta.2
+version=$(node -e "console.log(require('./package.json').version)")
 
 rm -rf _zip
 
 mkdir -p _zip/hydejack-pro-$version/.ssh
-cp ~/.ssh/hydejack_pro_customers _zip/hydejack-pro-$version.ssh
+cp ~/.ssh/hydejack_pro_customers _zip/hydejack-pro-$version/.ssh
 
 mkdir -p _zip/hydejack-pro-$version/install
 mkdir -p _zip/hydejack-pro-$version/upgrade
@@ -51,16 +51,32 @@ find _zip/hydejack-pro-$version/ -name '.DS_Store' -delete
 # This assumes the next version is already online at qwtel.com
 # This also assumes macOS with chrome installed...
 function pdfprint {
-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --print-to-pdf="_zip/hydejack-pro-$version/$1.pdf" $2
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+    --headless \
+    --disable-gpu \
+    --disable-translate \
+    --disable-extensions \
+    --disable-background-networking \
+    --safebrowsing-disable-auto-update \
+    --disable-sync \
+    --metrics-recording-only \
+    --disable-default-apps \
+    --no-first-run \
+    --mute-audio \
+    --hide-scrollbars \
+    --run-all-compositor-stages-before-draw \
+    --virtual-time-budget=10000 \
+    --print-to-pdf="_zip/hydejack-pro-$version/$1.pdf" $2
 }
 
-pdfprint "PRO License" "https://hydejack.com/licenses/PRO/"
-pdfprint "PRO–hy-drawer License" "https://qwtel.com/hy-drawer/licenses/hydejack/"
-pdfprint "PRO–hy-push-state License" "https://qwtel.com/hy-push-state/licenses/hydejack/"
-pdfprint "PRO–hy-img License" "https://qwtel.com/hy-img/licenses/hydejack/"
-pdfprint "Documentation" "https://hydejack.com/docs/$version/print/"
-pdfprint "NOTICE" "https://hydejack.com/NOTICE/"
-pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/"
+pdfprint "PRO License" "https://hydejack.com/licenses/PRO/" &
+pdfprint "PRO–hy-drawer License" "https://qwtel.com/hy-drawer/licenses/hydejack/" &
+pdfprint "PRO–hy-push-state License" "https://qwtel.com/hy-push-state/licenses/hydejack/" &
+pdfprint "PRO–hy-img License" "https://qwtel.com/hy-img/licenses/hydejack/" &
+pdfprint "Documentation" "https://hydejack.com/docs/$version/print/" &
+pdfprint "NOTICE" "https://hydejack.com/NOTICE/" &
+pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/" &
+wait
 
 # Genrate git diffs
 # TODO
