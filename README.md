@@ -1,6 +1,6 @@
 ---
 cover: true
-image: /assets/img/projects/hydejack-8.jpg
+image: /assets/img/hydejack-8.jpg
 hide_description: true
 permalink: /
 ---
