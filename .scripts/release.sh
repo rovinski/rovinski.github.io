@@ -5,7 +5,7 @@ version=$(node -e "console.log(require('./package.json').version)")
 rm -rf _zip
 
 mkdir -p _zip/hydejack-pro-$version/.ssh
-cp ~/.ssh/hydejack_pro_customers _zip/hydejack-pro-$version/.ssh
+cp ~/.ssh/hydejack_8_pro _zip/hydejack-pro-$version/.ssh
 
 mkdir -p _zip/hydejack-pro-$version/install
 mkdir -p _zip/hydejack-pro-$version/upgrade
