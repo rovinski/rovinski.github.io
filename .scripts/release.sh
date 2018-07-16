@@ -20,6 +20,7 @@ cp -r \
     ! -name vendor\
     ! -name _zip  \
     ! -name '*.gemspec'  \
+    ! -name '*.gem'  \
     ! -name '*~' \
     ! -name '_site*' \
     -mindepth 1 \
