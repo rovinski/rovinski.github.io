@@ -236,6 +236,7 @@ exclude:
   - webpack.config.js
   - "*.gemspec"
   - _js
+  - _plugins
   - .sass-cache
 include:
   - LICENSE.md
