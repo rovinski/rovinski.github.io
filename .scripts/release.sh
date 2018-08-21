@@ -74,7 +74,7 @@ pdfprint "PRO License" "https://hydejack.com/licenses/PRO/" &
 pdfprint "PRO–hy-drawer License" "https://qwtel.com/hy-drawer/licenses/hydejack/" &
 pdfprint "PRO–hy-push-state License" "https://qwtel.com/hy-push-state/licenses/hydejack/" &
 pdfprint "PRO–hy-img License" "https://qwtel.com/hy-img/licenses/hydejack/" &
-pdfprint "Documentation" "https://hydejack.com/docs/$version/print/" &
+pdfprint "Documentation" "https://hydejack.com/docs/print/" &
 pdfprint "NOTICE" "https://hydejack.com/NOTICE/" &
 pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/" &
 wait
