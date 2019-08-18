@@ -2,17 +2,19 @@
 
 version=$(node -e "console.log(require('./package.json').version)")
 
-rm -rf _zip
+rm -rf _zip/hydejack-pro-$version
+mkdir -p _zip/hydejack-pro-$version
+cd _zip/hydejack-pro-$version
 
-mkdir -p _zip/hydejack-pro-$version/.ssh
-cp ~/.ssh/hydejack_8_pro _zip/hydejack-pro-$version/.ssh
+mkdir -p .ssh
+cp ~/.ssh/hydejack_8_pro .ssh
 
-mkdir -p _zip/hydejack-pro-$version/install
-mkdir -p _zip/hydejack-pro-$version/upgrade
+mkdir -p install
+mkdir -p upgrade
 
 # Make install folder
 cp -r \
-  $(find . \
+  $(find ../.. \
     ! -name .git \
     ! -name .sass-cache \
     ! -name .bundle \
@@ -25,34 +27,34 @@ cp -r \
     ! -name '_site*' \
     -mindepth 1 \
     -maxdepth 1) \
-  _zip/hydejack-pro-$version/install
+  install
 
 # Make upgrade folder
 cp -r \
-  _includes \
-  _layouts \
-  _sass \
-  assets \
-  Gemfile* \
-  package* \
-  _zip/hydejack-pro-$version/upgrade
+  ../../_includes \
+  ../../_layouts \
+  ../../_sass \
+  ../../assets \
+  ../../Gemfile* \
+  ../../package* \
+  upgrade
 
 rm -r \
-  _zip/hydejack-pro-$version/upgrade/assets/icomoon \
-  _zip/hydejack-pro-$version/upgrade/assets/icons \
-  _zip/hydejack-pro-$version/upgrade/assets/img \
-  _zip/hydejack-pro-$version/upgrade/assets/ieconfig.xml \
-  _zip/hydejack-pro-$version/upgrade/assets/manifest.json \
-  _zip/hydejack-pro-$version/upgrade/assets/resume.json
+  upgrade/assets/icomoon \
+  upgrade/assets/icons \
+  upgrade/assets/img \
+  upgrade/assets/ieconfig.xml \
+  upgrade/assets/manifest.json \
+  upgrade/assets/resume.json
 
-find _zip/hydejack-pro-$version/upgrade/ -name 'my-*' -delete
-find _zip/hydejack-pro-$version/ -name '.DS_Store' -delete
+find upgrade/ -name 'my-*' -delete
+find . -name '.DS_Store' -delete
 
 # Generate PDFs.
 # This assumes the next version is already online at qwtel.com
 # This also assumes macOS with chrome installed...
 function pdfprint {
-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  /Applications/Chromium.app/Contents/MacOS/Chromium \
     --headless \
     --disable-gpu \
     --disable-translate \
@@ -66,8 +68,8 @@ function pdfprint {
     --mute-audio \
     --hide-scrollbars \
     --run-all-compositor-stages-before-draw \
-    --virtual-time-budget=10000 \
-    --print-to-pdf="_zip/hydejack-pro-$version/$1.pdf" $2
+    --virtual-time-budget=25000 \
+    --print-to-pdf="$1.pdf" $2
 }
 
 pdfprint "PRO License" "https://hydejack.com/licenses/PRO/" &
@@ -80,8 +82,11 @@ pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/" &
 wait
 
 # Genrate git diffs
-# TODO
-# git diff pro/v$version pro/v7.5.1 > v$version-to-v7.5.1.diff
+prev1=$(git tag --list 'pro/*' --sort version:refname | tail -2 | head -1 | sed -E 's:pro/v(.*):\1:')
+git diff pro/v$prev1..pro/v$version > $prev1--$version.diff
+
+prev2=$(git tag --list 'pro/*' --sort version:refname | tail -3 | head -1 | sed -E 's:pro/v(.*):\1:')
+git diff pro/v$prev2..pro/v$version > $prev2--$version.diff
 
 # Generate the zip
-cd _zip; zip -q -r hydejack-pro-$version.zip hydejack-pro-$version/
+cd ..; zip -q -r hydejack-pro-$version.zip hydejack-pro-$version/
