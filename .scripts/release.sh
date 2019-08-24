@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=$(node -e "console.log(require('./package.json').version)")
+version=$(cat package.json | jq '.version')
 
 rm -rf _zip/hydejack-pro-$version
 mkdir -p _zip/hydejack-pro-$version
