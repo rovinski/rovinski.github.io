@@ -21,7 +21,6 @@ cp -r \
     ! -name node_modules \
     ! -name vendor\
     ! -name _zip  \
-    ! -name '*.gemspec'  \
     ! -name '*.gem'  \
     ! -name '*~' \
     ! -name '_site*' \
@@ -36,6 +35,7 @@ cp -r \
   ../../_sass \
   ../../assets \
   ../../Gemfile* \
+  ../../*.gemspec  \
   ../../package* \
   upgrade
 
