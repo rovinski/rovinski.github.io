@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=$(cat package.json | jq '.version')
+version=$(cat package.json | jq '.version' -r)
 
 rm -rf _zip/hydejack-pro-$version
 mkdir -p _zip/hydejack-pro-$version
@@ -73,9 +73,9 @@ function pdfprint {
 }
 
 pdfprint "PRO License" "https://hydejack.com/licenses/PRO/" &
-pdfprint "PRO–hy-drawer License" "https://qwtel.com/hy-drawer/licenses/hydejack/" &
-pdfprint "PRO–hy-push-state License" "https://qwtel.com/hy-push-state/licenses/hydejack/" &
-pdfprint "PRO–hy-img License" "https://qwtel.com/hy-img/licenses/hydejack/" &
+pdfprint "PRO–hy-drawer License" "https://hydecorp.github.io/drawer/licenses/hydejack/" &
+pdfprint "PRO–hy-push-state License" "https://hydecorp.github.io/push-state/licenses/hydejack/" &
+pdfprint "PRO–hy-img License" "https://hydecorp.github.io/img/licenses/hydejack/" &
 pdfprint "Documentation" "https://hydejack.com/docs/print/" &
 pdfprint "NOTICE" "https://hydejack.com/NOTICE/" &
 pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/" &
