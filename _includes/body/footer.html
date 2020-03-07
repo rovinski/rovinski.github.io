@@ -4,6 +4,9 @@
   {% if site.copyright.size > 0 %}
     <p><small class="copyright">{{ site.copyright | markdownify | replace:'<p>','' | replace:'</p>','' }}</small></p>
   {% endif %}
+  {% if site.last_updated %}
+    <p><small class="copyright">Last site update: {{ site.time | date: '%Y-%m-%d' }}</small></p>
+  {% endif %}
   {% if site.legal.size > 0 %}
     <nav class="legal"><small>
     {% for node in site.legal %}
