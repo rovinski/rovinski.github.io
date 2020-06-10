@@ -26,8 +26,11 @@ REsearch group). I also formerly worked with Profs. [Jason Mars](http://jasonmar
 
 My broad research vision is that Moore's law is ending, so architectures and systems will have to
 evolve in order to pick up the slack. More often than not, this means specializing hardware for
-emerging applications and integrating solutions from across the hardware/software stack. Check out
-my [publications](/pub/) for a list of my recent work.
+emerging applications and integrating solutions from across the hardware/software stack. Developing
+hardware accelerators has shown me that one of the biggest challenges facing hardware acceleration
+is integration with system-on-chips (SoCs). My work addresses this challenge by creating tools and
+methodologies that can reduce engineering time and effort to create complex SoCs. Check out my
+[publications](/pub/) for a list of my recent work.
 
 ## Teaching
 

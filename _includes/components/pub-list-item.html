@@ -1,14 +1,21 @@
 {% assign post = include.post %}
 {% assign format = include.format | default:site.data.strings.date_formats.related_post | default:"%d %b %Y" %}
 
+{% assign paper_path  = "/pubs/" | append: post.tag | append: ".pdf" %}
+{% assign slides_path = "/pubs/" | append: post.tag | append: ".slides.pdf" %}
+{% assign bibtex_path = "/pubs/" | append: post.tag | append: ".bib" %}
+
+{% assign paper  = site.static_files | where: "path", paper_path  | first %}
+{% assign slides = site.static_files | where: "path", slides_path | first %}
+{% assign bibtex = site.static_files | where: "path", bibtex_path | first %}
+
 <li>
   <class="h4 flip-title"><span>{{ post.title }}</span></class>.
   <time class="heading faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.authors }}.</time>
   <time class="heading faded fine" datetime="{{ post.date | date_to_xmlschema }}">In <i>{{ post.venue }}</i>.</time>
   <time class="heading faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:format }}.</time>
   <br/>
-  {% if post.pdf    %}[<a href=/pubs/{{ post.tag }}.pdf>Paper</a>]{% endif %}
-  {% if post.slides %}[<a href=/pubs/{{ post.tag }}_slides.pdf>Slides</a>]{% endif %}
-  {% if post.bibtex %}[<a href=/pubs/{{ post.tag }}.bib>BibTeX</a>]{% endif %}
+  {% if paper  %}[<a href=/pubs/{{ post.tag }}.pdf target="_blank">Paper</a>]{% endif %}
+  {% if slides %}[<a href=/pubs/{{ post.tag }}.slides.pdf target="_blank">Slides</a>]{% endif %}
+  {% if bibtex %}[<a href=/pubs/{{ post.tag }}.bib target="_blank">BibTeX</a>]{% endif %}
 </li>
-<!--  <a href="{{ post.url | relative_url }}" class="h4 flip-title"><span>{{ post.title }}</span></a> -->
