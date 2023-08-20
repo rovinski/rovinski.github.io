@@ -28,7 +28,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Postdoc in computer architecture, VLSI, and EDA
+  Assistant Professor in computer architecture, VLSI, and EDA
 
 # A list of keywords for your blog
 keywords:              []
@@ -41,7 +41,7 @@ logo:                  /assets/icons/me.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   name:                Austin Rovinski
-  email:               <mail@domain.tld>
+  email:               rovinski@nyu.edu
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 

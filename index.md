@@ -10,19 +10,17 @@ image: /assets/img/me.jpg
 
 ![Screenshot](assets/img/me.jpg){:.lead srcset="/assets/img/me.jpg"}
 
-I am a postdoc supervised by Professor [Christopher Batten](https://www.csl.cornell.edu/~cbatten)
-in Cornell University's Electrical and Computer Engineering department. I recently joined Cornell
-after receiving my PhD from the University of Michigan - Ann Arbor in April 2022.
-My career at Michigan and Cornell has allowed me to experience a broad range of technical fields in
-both electrical and computer engineering - from emerging applications down to digital circuits.
-My primary research focus lies in both computer architecture and VLSI.
+I am an assistant professor in New York University's [Electrical and Computer Engineering department](
+https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering).
+I recently joined NYU (Fall '23) after a postdoc at Cornell University with Professor [Christopher 
+Batten](https://www.csl.cornell.edu/~cbatten).
+My primary research focus lies across computer architecture, VLSI, and EDA.
 
-I am seeking tenure-track faculty positions as well as industry research positions starting in 2023.
-If you have opportunities, feel free to contact me at rovinski [at] cornell [dot] edu.
+I can be reached by email at rovinski AT nyu DOT edu.
 
 ## Research
 
-My broad research vision is that Moore's law is ending, so architectures and systems will have to
+My broad research vision is that Moore's Law is ending, so architectures and systems will have to
 evolve in order to pick up the slack. More often than not, this means specializing hardware for
 emerging applications and integrating solutions from across the hardware/software stack. Developing
 hardware accelerators has shown me that one of the biggest challenges facing hardware acceleration
@@ -30,9 +28,8 @@ is integration with system-on-chips (SoCs). My work addresses this challenge by 
 methodologies, and accelerators which can reduce engineering time and effort to create complex SoCs.
 Check out my [publications](/pub/) for a list of my recent work.
 
-At Cornell, I am currently working on several projects including architectures for optoelectronic
-interconnects, reproducible and open-source hardware, and accelerators for electronic design
-automation (EDA).
+At Cornell, I worked on several projects including architectures for optoelectronic interconnects,
+reproducible and open-source hardware, and accelerators for electronic design automation (EDA).
 
 At Michigan, my dissertation entitled *Towards Free, Open, and Ubiquitous Hardware Design* focused
 on addressing issues of cost, accessibility, and runtime performance of EDA tools. Under the advising
@@ -44,10 +41,12 @@ Professors [Jason Mars](http://jasonmars.org) and [Lingjia Tang](http://www.ling
 
 ## Teaching
 
-I have been both an undergraduate Instructional Assistant (IA) and Graduate Student Instructor (GSI)
-for Michigan's ENGR 100 - section 250: Microprocessors and Toys. This class is a personal favorite
-of mine because of both the great introduction to computer engineering and the openness of the
-course project.
+**I am on teaching relief this semester as I develop my lab at NYU.**
+
+Previously, I have been both an undergraduate Instructional Assistant (IA) and Graduate Student
+Instructor (GSI) for Michigan's ENGR 100 - section 250: Microprocessors and Toys. This class is a
+personal favorite of mine because of both the great introduction to computer engineering and the
+openness of the course project.
 
 This course is designed to give a broad overview of computer engineering to ambitious
 freshman. It covers the basics of computer hardware, including CMOS transistors, digital gates,
@@ -62,12 +61,14 @@ greater working knowledge than the class formally provides through lectures. It'
 teach and guide the students in the material that is often multiple courses ahead of their current
 knowledge base, although students often do a good job of learning topics on their own.
 
-Past teaching:
-* Winter 2019 - ENGR 100: Microprocessors and Toys
-* Winter 2018 - ENGR 100: Microprocessors and Toys
-* Winter 2016 - ENGR 100: Microprocessors and Toys
-* Winter 2015 - ENGR 100: Microprocessors and Toys
-* Winter 2014 - ENGR 100: Microprocessors and Toys
+**Past Teaching**:
+
+* Michigan
+  * Winter 2019 - ENGR 100: Microprocessors and Toys
+  * Winter 2018 - ENGR 100: Microprocessors and Toys
+  * Winter 2016 - ENGR 100: Microprocessors and Toys
+  * Winter 2015 - ENGR 100: Microprocessors and Toys
+  * Winter 2014 - ENGR 100: Microprocessors and Toys
 
 {% comment %}
 ## Roles and Responsibilities
