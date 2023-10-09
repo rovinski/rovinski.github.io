@@ -8,7 +8,7 @@ image: /assets/img/me.jpg
 
 ---
 
-![Screenshot](assets/img/me.jpg){:.lead srcset="/assets/img/me.jpg"}
+![Screenshot](assets/img/me.jpg){:.lead srcset="/assets/img/me_banner.webp"}
 
 I am an assistant professor in New York University's [Electrical and Computer Engineering department](
 https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering).
@@ -16,7 +16,8 @@ I recently joined NYU (Fall '23) after a postdoc at Cornell University with Prof
 Batten](https://www.csl.cornell.edu/~cbatten).
 My primary research focus lies across computer architecture, VLSI, and EDA.
 
-I can be reached by email at rovinski AT nyu DOT edu.
+My faculty page is [here](https://engineering.nyu.edu/faculty/austin-rovinski) and I can be reached
+by email at rovinski AT nyu DOT edu.
 
 ## Research
 
