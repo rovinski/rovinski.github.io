@@ -42,8 +42,14 @@ Professors [Jason Mars](http://jasonmars.org) and [Lingjia Tang](http://www.ling
 
 ## Teaching
 
-**I am on teaching relief this semester as I develop my lab at NYU.**
+**Agile System-on-Chip Design**  
+I currently teach a special topics course on Agile System-on-Chip design. The focus of this course
+is to put students in the mentality of a small hardware startup company or academic lab. They will
+identify a problem, propose a solution which can be solved through an ASIC, then implement their
+solution. The course focuses on the RTL-to-tapeout process, with the goal of students being ready
+to turn their ideas into a hardware startup after completion of the course.
 
+**Microprocessors and Toys**  
 Previously, I have been both an undergraduate Instructional Assistant (IA) and Graduate Student
 Instructor (GSI) for Michigan's ENGR 100 - section 250: Microprocessors and Toys. This class is a
 personal favorite of mine because of both the great introduction to computer engineering and the
@@ -56,20 +62,27 @@ low-level programming via assembly, such as ISAs, I/O interfaces, and drivers. T
 the course is an open-ended project for groups to work in teams to create a microcontroller-based
 toy. It's always very interesting to see the ideas students come up with!
 
-My role as an IA / GSI has been to instruct and supervise labs as well as mentor students on their
+My role as an IA / GSI was to instruct and supervise labs as well as mentor students on their
 projects. Because the projects are so open-ended, students often select projects that require a much
 greater working knowledge than the class formally provides through lectures. It's my job to help
 teach and guide the students in the material that is often multiple courses ahead of their current
 knowledge base, although students often do a good job of learning topics on their own.
 
-**Past Teaching**:
+
+**Current / Future Teaching**  
+* 2025 Spring - ECE-GY 6443: VLSI System and Architecture Design
+* 2024 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
+
+**Past Teaching**  
+* NYU
+  * 2024 Spring - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
 
 * Michigan
-  * Winter 2019 - ENGR 100: Microprocessors and Toys
-  * Winter 2018 - ENGR 100: Microprocessors and Toys
-  * Winter 2016 - ENGR 100: Microprocessors and Toys
-  * Winter 2015 - ENGR 100: Microprocessors and Toys
-  * Winter 2014 - ENGR 100: Microprocessors and Toys
+  * 2019 Winter - ENGR 100: Microprocessors and Toys
+  * 2018 Winter - ENGR 100: Microprocessors and Toys
+  * 2016 Winter - ENGR 100: Microprocessors and Toys
+  * 2015 Winter - ENGR 100: Microprocessors and Toys
+  * 2014 Winter - ENGR 100: Microprocessors and Toys
 
 {% comment %}
 ## Roles and Responsibilities
