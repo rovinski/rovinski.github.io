@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: page
 title: Research Assistant Applicant Guide
-slug: applicants
 ---
 
 Applicant guide for Undergrad and Master's students who would like to work with me.

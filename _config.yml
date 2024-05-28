@@ -52,7 +52,9 @@ menu:
   - title:             Publications
     url:               /pub/
   - title:             Student Applicants
-    url:               /blog/applicants/
+    url:               /applicants/
+#  - title:             Student Resources
+#    url:               /students/
 #  - title:             Projects
 #    url:               /projects/
 #  - title:             Résumé*
