@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Research Assistant Applicant Guide
+description: >
+  Applicant guide for Undergrad and Master's students who would like to work with me.
 ---
 
-Applicant guide for Undergrad and Master's students who would like to work with me.
 
 I get many requests from students to work with me, and as much as I would love to mentor students, I unfortunately can't respond to all requests.
 
@@ -20,6 +21,8 @@ There is no expected time commitment or pace of work for volunteers. As part of 
 
 If this initial project goes successfully and we determine that this direction of research is right for you, we can work together on selecting the next project which is more intellectually challenging and involves closer mentorship.
 
+If this opportunity interests you, please [contact me](#contact-me).
+
 # Independent Study Student
 Independent studies operate similarly to [(1)](#volunteer-research-assistant) except that: 
 1. You will obtain credit for and be graded on your work.
@@ -34,14 +37,19 @@ The main difference is that 9953 is 3 credits whereas 9941 is 1.5 credits _and c
 Your effort is expected to be 3-4x the number of credit hours, so 4.5-6 hours of work per week for 9941 and 9-12 hours per week for 9953.
 We will meet roughly every 1-2 weeks while classes are in session to keep track of progress and guide the project direction. A short final report is expected at the end of the term.
 
-**You must email me a request to register before signing up for a course.** I generally do not take first-semester students unless they have demonstrated significant experience in undergrad in the area of interest. I also have limited slots for students - some semesters I may not be looking to mentor any students. To make a request, you should send me an email with:
-
-1. A copy of your CV
-2. Your undergraduate transcript
-3. Your graduate transcript (if a graduate student)
-4. A description of what areas of research you are interested in and why
-5. Field(s) of study you are interested in for the project (computer architecture, EDA, VLSI)
-6. Any ideas for a potential project (if you have one)
+**You must email me a request to register before signing up for a course.** I generally do not take first-semester students unless they have demonstrated significant experience in undergrad in the area of interest. I also have limited slots for students - some semesters I may not be looking to mentor any students. If this opportunity interests you, please [contact me](#contact-me).
 
 # Paid Research Assistant
 I sometimes have additional funding to pay students as research assistants. I usually look to recruit paid research assistants from [(1)](#volunteer-research-assistant) or [(2)](#independent-study-student) who have demonstrated successful research. Paid research positions are contingent on whether I currently have a funded project which requires additional student help.
+
+# Contact Me
+To make a request, you should send me an email with:
+
+1. What type of position you are applying for
+2. A copy of your CV
+3. Your undergraduate transcript
+4. Your graduate transcript (if a graduate student)
+5. Field(s) of study you are interested in for the project (computer architecture, EDA, VLSI) and why
+6. Your future goals (Master's/PhD program, industry job, try out research, etc.)
+
+If you have ideas for a potential project that you think I would be a good mentor for, please feel free to pitch them!
