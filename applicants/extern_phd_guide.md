@@ -24,13 +24,14 @@ semester.
 * **Summer**
   * You should begin requesting your letters of reference from trusted mentors
   * Take an English proficiency exam, [if required](#english-proficiency-exam)
-* **September -- November**: PhD application opens. Check the NYU Tandon application portal for
-details.
-* **December**: PhD application closes. You should have your application in by the deadline. It is
-fine for letters of reference to come in shortly after the deadline, but earlier is better.
-* **December -- March**: Applications are reviewed. It takes some time to collect all documents,
-letters, etc.
-* **February -- April**: Admission decisions are released.
+* **September -- November**: PhD application opens. Check the NYU Tandon [application portal](https://apply.engineering.nyu.edu/apply/)
+for details.
+* **December**: PhD application closes, usually <u>December 1</u>, but check the portal to confirm.
+You should have your application in by the deadline. It is fine for letters of reference to come in
+shortly after the deadline, but earlier is better.
+* **December -- March**: Applications are reviewed. Please note it can take quite some time to
+collect all documents, transcripts, transcript translations, recommendation letters, etc.
+* **February -- April**: Admission decisions are released. The timing is highly variable.
 * **April 15**: [CGS deadline to accept an offer of admission](https://cgsnet.org/resources/for-current-prospective-graduate-students/april-15-resolution).
 NYU is a member of CGS and abides by this.
 * **April**: Waitlist admissions. A very small percentage of students will be waitlisted and may be
@@ -44,14 +45,9 @@ Here are important items to verify when filling out your application in the onli
 * Under "faculty member(s) you wish to collaborate with", include my name (you can include other
 faculty you are interested in as well)
 * The GRE exam is optional, so you need not take it if you haven't already.
-* An English language proficiency exam is required for international applicants. You can find the
-list of accepted exams and minimum scores under "Test Information".
+* An English language proficiency exam [is required](#english-proficiency-exam) for international
+applicants. You can find the list of accepted exams and minimum scores under "Test Information".
 * Be sure to apply by the posted application deadline.
-
-
-For now, the best thing you can do is send me 
-i
-I get many requests from students to work with me, and as much as I would love to mentor students, I unfortunately can't respond to all requests.
 
 # English Proficiency Exam
 
@@ -102,6 +98,13 @@ An example might be to ask:
 2. A professor whose project-based course you did well in and they remember you (good letter)
 3. Your summer internship mentor who had some interaction with you, but perhaps the work wasn't very
 independent (decent letter)
+
+Every applicant should have 3 letters. A very common scenario is when an applicant has 1-2 strong
+recommenders, and they need to find a third who they know will not be as strong. In that case, it is
+helpful to explicitly state this in your request. You can simply state that you have other strong
+reccommenders, but you are hoping that the third recommender can "offer additional commentary" on
+your background. This is a polite coding that lets the recommender know that they don't have to
+worry about the recommendation being strong, and it's usually very helpful and relieving to hear.
 
 # Contact Me
 If you are interested in pursuing a PhD with me, please read this page carefully and send me an
