@@ -12,7 +12,7 @@ image: /assets/img/me.jpg
 
 I am an assistant professor in New York University's [Electrical and Computer Engineering department](
 https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering).
-I recently joined NYU (Fall '23) after a postdoc at Cornell University with Professor [Christopher 
+I joined NYU in Fall 2023 after a postdoc at Cornell University with Professor [Christopher 
 Batten](https://www.csl.cornell.edu/~cbatten).
 My primary research focus lies across computer architecture, VLSI, and EDA.
 
@@ -42,12 +42,14 @@ Professors [Jason Mars](http://jasonmars.org) and [Lingjia Tang](http://www.ling
 
 ## Teaching
 
-**Agile System-on-Chip Design**  
-I currently teach a special topics course on Agile System-on-Chip design. The focus of this course
+**Agile System-on-Chip Design**
+Each Fall, I teach a special topics course on Agile System-on-Chip design. The focus of this course
 is to put students in the mentality of a small hardware startup company or academic lab. They will
 identify a problem, propose a solution which can be solved through an ASIC, then implement their
 solution. The course focuses on the RTL-to-tapeout process, with the goal of students being ready
-to turn their ideas into a hardware startup after completion of the course.
+to turn their ideas into a hardware startup after completion of the course. This course was
+developed entirely by me with inspiration from courses such as EECS 627 at Michigan, ECE 5745 at
+Cornell, and EE372 at Stanford.
 
 **Microprocessors and Toys**  
 Previously, I have been both an undergraduate Instructional Assistant (IA) and Graduate Student
@@ -70,11 +72,13 @@ knowledge base, although students often do a good job of learning topics on thei
 
 
 **Current / Future Teaching**  
+* 2026 Spring - ECE-GY 6443: VLSI System and Architecture Design
+* 2025 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
 * 2025 Spring - ECE-GY 6443: VLSI System and Architecture Design
-* 2024 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
 
 **Past Teaching**  
 * NYU
+  * 2024 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
   * 2024 Spring - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
 
 * Michigan
