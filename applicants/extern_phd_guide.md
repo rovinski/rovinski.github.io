@@ -106,12 +106,37 @@ reccommenders, but you are hoping that the third recommender can "offer addition
 your background. This is a polite coding that lets the recommender know that they don't have to
 worry about the recommendation being strong, and it's usually very helpful and relieving to hear.
 
-# Contact Me
-If you are interested in pursuing a PhD with me, please read this page carefully and send me an
-email with:
+# What Not to Do
 
-1. A copy of your CV
-2. Your undergraduate transcript
-3. Your graduate transcript (if a graduate student)
-4. A description of what area(s) of research you are interested in (computer architecture, VLSI,
-EDA) and why
+Here is a list of common mistakes I notice from students which can decrease your chances of me
+advising you for a PhD:
+
+* **Use AI to write emails to me**. AI writing patterns are painfully obvious to spot, and I will
+know that you used one. Using AI shows me that you cannot take the time to write out a personalized,
+thoughtful email to me, and that you don't care too much about me being your advisor. That being
+said, using AI to inspire you or proofread your emails is completely fine - I am mainly concerned
+with the emails that look 100% AI-generated.
+
+* **Email me more than 3 times in a row without a response**. There several times where I can be
+busy and may not be able to respond right away. Rest assured that I will eventually see and read
+your email when it matters for applications. Emailing twice or even three times can sometimes be
+helpful to bump your email to the top of my inbox (for a brief moment). Emailing more than that can
+put you at risk of having your email flagged as spam before I have a chance to respond.
+
+* **Regurgitate my papers**. I am not talking about people who have read or skimmed my papers and
+have some thoughts on it. I am talking about people who almost literally copy and paste parts of
+the abstract into their email to me as an attempt to show me they have read it. This feels very
+impersonal, a little deceitful, and it appears worse than simply saying you are interested in the
+topic.
+
+# Contact Me
+If you are interested in pursuing a PhD with me, please read this entire page carefully and send me
+an email with:
+
+1. "[PhD Applicant]" at the **start** of the subject line. Please include the square brackets.
+This helps the email get filtered to the right inbox
+2. A copy of your CV
+3. Your undergraduate transcript
+4. Your graduate transcript (if a graduate student)
+5. A description of what area(s) of research you are interested in and why (*specifically*, one or
+more of computer architecture, VLSI, EDA).
