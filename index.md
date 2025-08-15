@@ -42,7 +42,7 @@ Professors [Jason Mars](http://jasonmars.org) and [Lingjia Tang](http://www.ling
 
 ## Teaching
 
-**Agile System-on-Chip Design**
+**Agile System-on-Chip Design**  
 Each Fall, I teach a special topics course on Agile System-on-Chip design. The focus of this course
 is to put students in the mentality of a small hardware startup company or academic lab. They will
 identify a problem, propose a solution which can be solved through an ASIC, then implement their
@@ -74,10 +74,10 @@ knowledge base, although students often do a good job of learning topics on thei
 **Current / Future Teaching**  
 * 2026 Spring - ECE-GY 6443: VLSI System and Architecture Design
 * 2025 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
-* 2025 Spring - ECE-GY 6443: VLSI System and Architecture Design
 
 **Past Teaching**  
 * NYU
+  * 2025 Spring - ECE-GY 6443: VLSI System and Architecture Design
   * 2024 Fall - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
   * 2024 Spring - ECE-GY 9433: Agile System-on-Chip Design (Special Topics)
 
