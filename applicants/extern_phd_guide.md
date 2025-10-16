@@ -41,7 +41,7 @@ admitted between April 15 and May 1.
 
 Here are important items to verify when filling out your application in the online portal:
 
-* Under Program Information, select "Doctorate in Electrical Engineering".
+* Under Program Information, select "Doctorate in Electrical and Computer Engineering".
 * Under "faculty member(s) you wish to collaborate with", include my name (you can include other
 faculty you are interested in as well)
 * The GRE exam is optional, so you need not take it if you haven't already.
@@ -123,11 +123,10 @@ your email when it matters for applications. Emailing twice or even three times 
 helpful to bump your email to the top of my inbox (for a brief moment). Emailing more than that can
 put you at risk of having your email flagged as spam before I have a chance to respond.
 
-* **Regurgitate my papers**. I am not talking about people who have read or skimmed my papers and
-have some thoughts on it. I am talking about people who almost literally copy and paste parts of
+* **Regurgitate my papers**. I am not concerned with people who have read or skimmed my papers and
+have some thoughts on it. I am concerned with people who almost literally copy and paste parts of
 the abstract into their email to me as an attempt to show me they have read it. This feels very
-impersonal, a little deceitful, and it appears worse than simply saying you are interested in the
-topic.
+impersonal, and it appears worse than simply saying you are interested in the topic.
 
 # Contact Me
 If you are interested in pursuing a PhD with me, please read this entire page carefully and send me
@@ -139,4 +138,4 @@ This helps the email get filtered to the right inbox
 3. Your undergraduate transcript
 4. Your graduate transcript (if a graduate student)
 5. A description of what area(s) of research you are interested in and why (*specifically*, one or
-more of computer architecture, VLSI, EDA).
+more of: computer architecture, VLSI, and/or EDA).
